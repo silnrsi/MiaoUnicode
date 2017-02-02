@@ -1,31 +1,9 @@
-#! /usr/bin/python
-# encoding: utf-8
 
-import os
-
-APPNAME="miao"
-VERSION=0.6
-OUTDIR='exes'
-ZIPDIR='zips'
 out='results'
-LICENSE="OFL.txt"
-sourcedir='source/'
 
-langmap = {
-   'hmd' : [['hmdUni'],['Shimenkan']],
-   'lpo' : [['lpoUni'],['Taogu']]
-}
-
-for l in langmap.keys():
-	fontname = langmap[l][1][0]
-	keyboardname = langmap[l][0][0]
-	cmds = [cmd('ttfdeflang -d ' + l + ' ${DEP} ${TGT}'), name(fontname, lang='en-US')]
-	if os.path.exists(os.path.join(sourcedir, l+'map.cfg')) :
-        	cmds.append(cmd('ttfremap -c ${SRC} -r ${DEP} ${TGT}', [sourcedir + l + 'map.cfg']))
-	font(
-     target=process('fonts/' + fontname + '.ttf', *cmds),
-	source=sourcedir + APPNAME + '.sfd',
-    graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
+font(
+	target=process("MiaoUnicode.ttf"),
+	source="source/miao.sfd",
+    graphite=gdl("miao.gdl", master="source/miao.gdl", params="-d -q -w3521", make_params="-r"),
     script = 'plrd'
-)
-
+    )
