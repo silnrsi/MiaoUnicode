@@ -1,0 +1,226 @@
+@clsInitStd = [miao_pa miao_ba miao_yi_pa miao_pla
+		miao_ma miao_mha miao_arch_ma
+		miao_fa miao_va miao_vfa
+		miao_ta miao_da miao_yi_tta
+		miao_yi_ta miao_tta miao_dda
+		miao_na miao_nha miao_yi_nna
+		miao_arch_na miao_nna miao_nnha
+		miao_la miao_lya miao_lha miao_lhya
+		miao_tlha miao_dlha miao_tlhya miao_dlhya
+		miao_ka miao_ga miao_yi_ka miao_qa miao_qga
+		miao_nga miao_ngha miao_arch_nga
+		miao_ha miao_xa miao_gha miao_ghha
+		miao_tssa miao_dzza miao_nya
+		miao_nyha miao_tsha
+		miao_dzha miao_yi_tsha miao_yi_dzha miao_ref_tsha
+		miao_sha miao_ssa miao_zha miao_zsha
+		miao_tsa miao_dza miao_yi_tsa
+		miao_sa miao_za miao_zsa
+		miao_zza miao_zzsa miao_arch_zza
+		miao_zzya miao_zzsya miao_wa miao_ah miao_hha miao_ma.lpo miao_na.lpo miao_nga.lpo miao_sha.lpo];
+
+@clsInitSaltStd = [miao_sha miao_ssa];
+
+@clsInitSalt = [miao_sha.salt miao_ssa.salt];
+
+@clsWartStd = [miao_ba miao_mha miao_vfa
+                miao_da miao_dda miao_nha miao_nnha
+                miao_lya miao_lhya miao_dlha miao_dlhya
+                miao_ga miao_qga miao_ngha
+                miao_ghha miao_dzza miao_nyha
+                miao_dzha miao_zsha miao_dza miao_zsa
+                miao_zza miao_zzsya miao_hha];
+
+@clsWartChux = [miao_ba.chux miao_mha.chux miao_vfa.chux
+		 miao_da.chux miao_dda.chux miao_nha.chux miao_nnha.chux
+		 miao_lya.chux miao_lhya.chux miao_dlha.chux miao_dlhya.chux
+		 miao_ga.chux miao_qga.chux miao_ngha.chux
+		 miao_ghha.chux miao_dzza.chux miao_nyha.chux
+		 miao_dzha.chux miao_zsha.chux miao_dza.chux miao_zsa.chux
+		 miao_zzsa.chux miao_zzsya.chux miao_hha.chux];
+
+@clsInitAspL = [miao_ma.aspl miao_mha.aspl miao_arch_ma.aspl
+		 miao_na.aspl miao_nha.aspl miao_yi_nna.aspl
+		 miao_arch_na.aspl miao_nna.aspl miao_nnha.aspl
+		 miao_nga.aspl miao_ngha.aspl miao_arch_nga.aspl
+		 miao_mha.chux.aspl
+		 miao_nha.chux.aspl miao_nnha.chux.aspl
+		 miao_ngha.chux.aspl];
+			 
+@clsInitAspLStd = [miao_ma miao_mha miao_arch_ma
+		    miao_na miao_nha miao_yi_nna
+		    miao_arch_na miao_nna miao_nnha
+		    miao_nga miao_ngha miao_arch_nga
+		    miao_mha.chux
+		    miao_nha.chux miao_nnha.chux
+		    miao_ngha.chux miao_ma.lpo miao_na.lpo miao_nga.lpo];
+
+@clsInit = [@clsInitStd @clsInitSalt @clsWartChux @clsInitAspL];
+
+@clsInitHiMajKern = [miao_la miao_lya miao_lha miao_lhya
+			miao_tlha miao_dlha miao_tlhya miao_dlhya
+			miao_tssa miao_dzza miao_zza miao_zzsa miao_arch_zza
+			miao_zzya miao_zzsya];  
+
+@clsInitHiMinKern = [miao_yi_pa miao_arch_ma miao_arch_ma.aspl];					   
+
+@clsInitHiNoKern = [miao_pa miao_ba miao_pla miao_ma miao_mha miao_fa
+			miao_va miao_vfa miao_ta miao_da
+			miao_yi_tta miao_yi_ta miao_tta miao_dda
+			miao_na miao_nha miao_yi_nna miao_arch_na miao_nna miao_nnha
+			miao_ka miao_ga miao_yi_ka miao_qa miao_qga miao_nga miao_ngha
+			miao_arch_nga miao_ha miao_xa miao_gha miao_ghha
+			miao_nya miao_nyha miao_tsha miao_dzha miao_yi_tsha miao_yi_dzha
+			miao_ref_tsha miao_sha miao_ssa miao_zha miao_zsha
+			miao_tsa miao_dza miao_yi_tsa miao_sa miao_za miao_zsa
+			miao_wa miao_ah miao_hha
+			@clsWartChux @clsInitSalt
+			miao_ma.aspl miao_mha.aspl
+			miao_na.aspl miao_nha.aspl
+			miao_na.aspl miao_nha.aspl miao_yi_nna.aspl
+			miao_arch_na.aspl miao_nna.aspl miao_nnha.aspl
+			miao_nga.aspl miao_ngha.aspl miao_arch_nga.aspl
+			miao_mha.chux.aspl
+			miao_nha.chux.aspl miao_nnha.chux.aspl
+			miao_ngha.chux.aspl miao_ma.lpo miao_na.lpo miao_nga.lpo miao_sha.lpo];
+
+@clsInitMidMajKern = [miao_fa miao_ta miao_da miao_yi_ta miao_tta miao_dda
+			miao_na miao_nha miao_yi_nna
+			miao_la miao_lya miao_qa miao_qga
+			miao_tssa miao_dzza miao_nya miao_dzha miao_tsha miao_ref_tsha
+			miao_ba.chux miao_mha.chux miao_vfa.chux
+			miao_da.chux miao_dda.chux miao_nha.chux miao_nnha.chux
+			miao_lya.chux
+			miao_ga.chux miao_qga.chux miao_ngha.chux
+			miao_ghha.chux miao_dzza.chux miao_nyha.chux
+			miao_dzha.chux miao_zsha.chux   miao_zsa.chux
+			miao_hha.chux
+			miao_na.aspl miao_nha.aspl miao_yi_nna.aspl
+			miao_mha.chux.aspl
+			miao_nha.chux.aspl miao_nnha.chux.aspl
+			miao_ngha.chux.aspl miao_na.lpo];
+
+@clsInitMidMinKern = [miao_yi_pa miao_va miao_vfa
+			miao_tlha miao_dlha miao_tlhya miao_dlhya
+			miao_yi_ka miao_nyha miao_tsha
+			miao_zza miao_zzsa miao_zzya miao_zzsya
+			miao_ah miao_hha
+			miao_dlha.chux miao_dlhya.chux miao_zzsa.chux miao_zzsya.chux];
+
+@clsInitMidNoKern  = [miao_pa miao_ba miao_pla miao_ma miao_mha miao_arch_ma
+			miao_yi_tta miao_arch_na miao_nna miao_nnha
+			miao_lha miao_lhya miao_ka miao_ga 
+			miao_nga miao_ngha miao_arch_nga
+			miao_ha miao_xa miao_gha miao_ghha miao_yi_dzha
+			miao_sha miao_ssa miao_zha miao_zsha
+			miao_tsa miao_dza miao_yi_tsa
+			miao_sa miao_za miao_zsa miao_arch_zza miao_wa
+			@clsInitSalt miao_lhya.chux miao_dza.chux
+			miao_ma.aspl miao_mha.aspl miao_arch_ma.aspl
+			miao_arch_na.aspl miao_nna.aspl miao_nnha.aspl
+			miao_nga.aspl miao_ngha.aspl miao_arch_nga.aspl miao_ma.lpo miao_nga.lpo miao_sha.lpo];
+
+@clsInitLoChuxKern = [miao_vfa.chux miao_da.chux miao_qga.chux miao_ghha.chux];		
+
+@clsInitLoMajKern = [miao_fa miao_va miao_vfa
+			miao_ta miao_da miao_yi_tta
+			miao_qa miao_qga
+			miao_ah miao_hha
+			miao_ba.chux miao_dda.chux
+			miao_nha.chux miao_nnha.chux miao_ga.chux miao_ngha.chux
+			miao_ghha.chux miao_ghha.chux miao_dzha.chux
+			miao_dza.chux miao_zsha.chux miao_zsa.chux
+			miao_nha.chux.aspl miao_nnha.chux.aspl
+			miao_ngha.chux.aspl];					  
+
+@clsInitLoMinKern = [miao_yi_ta miao_yi_ka
+			miao_tsa miao_dza miao_yi_tsa
+			miao_sha miao_ssa
+			miao_mha.chux miao_mha.chux.aspl miao_sha.lpo];
+				  
+@clsInitLoNoKern = [miao_pa miao_ba miao_yi_pa miao_pla miao_ma miao_mha miao_arch_ma
+			miao_tta miao_dda
+			miao_na miao_nha miao_yi_nna miao_arch_na miao_nna miao_nnha
+			miao_la miao_lya miao_lha miao_lhya
+			miao_tlha miao_dlha miao_tlhya miao_dlhya
+			miao_ka miao_ga
+			miao_nga miao_ngha miao_arch_nga
+			miao_ha miao_xa miao_gha miao_ghha
+			miao_tssa miao_dzza miao_nya miao_nyha miao_tsha
+			miao_dzha miao_yi_tsha miao_yi_dzha miao_ref_tsha
+			miao_zha miao_zsha miao_sa miao_za miao_zsa
+			miao_zza miao_zzsa miao_arch_zza miao_zzya miao_zzsya miao_wa
+			@clsInitSalt
+			miao_lya.chux miao_lhya.chux miao_dlha.chux miao_dlhya.chux
+			miao_dzza.chux miao_zzsa.chux miao_zzsya.chux
+			miao_ma.aspl miao_mha.aspl miao_arch_ma.aspl
+			miao_na.aspl miao_nha.aspl miao_yi_nna.aspl
+			miao_arch_na.aspl miao_nna.aspl miao_nnha.aspl
+			miao_nga.aspl miao_ngha.aspl miao_arch_nga.aspl miao_ma.lpo miao_na.lpo miao_nga.lpo];
+				  
+@clsAsp = [miao_asp miao_ref_voice miao_ref_asp];
+
+@clsAspHi = [miao_asp miao_ref_voice];
+
+@clsAspLo = [miao_ref_asp];
+
+@clsFina = [miao_a miao_aa miao_ahh miao_an miao_ang
+             miao_o miao_oo miao_wo miao_w
+             miao_e miao_en miao_eng miao_oey
+             miao_i miao_ia miao_ian miao_iang miao_io
+             miao_ie miao_ii miao_iu miao_ing
+             miao_u miao_ua miao_uan miao_uang
+             miao_uu miao_uei miao_ung
+             miao_y miao_yi miao_ae miao_aee
+             miao_err miao_round_err miao_er miao_round_er
+             miao_ai miao_ei miao_au miao_ou
+             miao_n miao_ng miao_ei.hmd];
+
+@clsFinaYcmp = [miao_a.ycmp miao_aa.ycmp miao_ahh.ycmp miao_an.ycmp miao_ang.ycmp
+		miao_o.ycmp miao_oo.ycmp miao_wo.ycmp miao_w.ycmp
+		miao_e.ycmp miao_en.ycmp miao_eng.ycmp miao_oey.ycmp
+		miao_i.ycmp miao_ia.ycmp miao_ian.ycmp miao_iang.ycmp miao_io.ycmp
+		miao_ie.ycmp miao_ii.ycmp miao_iu.ycmp miao_ing.ycmp
+		miao_u.ycmp miao_ua.ycmp miao_uan.ycmp miao_uang.ycmp
+		miao_uu.ycmp miao_uei.ycmp miao_ung.ycmp
+		miao_y.ycmp miao_yi.ycmp miao_ae.ycmp miao_aee.ycmp
+		miao_err.ycmp miao_round_err.ycmp miao_er.ycmp miao_round_er.ycmp
+		miao_ai.ycmp miao_ei.ycmp miao_au.ycmp miao_ou.ycmp
+		miao_n.ycmp miao_ng.ycmp miao_ei.ycmphmd];
+
+@clsFinaStdYShift = [miao_aa miao_ahh miao_an miao_ang
+			miao_o miao_oo miao_wo miao_w
+			miao_e miao_en miao_eng miao_oey
+			miao_i miao_ia miao_ian miao_iang miao_io
+			miao_ie miao_ii miao_iu miao_ing
+			miao_u miao_ua miao_uan miao_uang
+			miao_uu miao_uei miao_ung
+			miao_y miao_yi miao_ae miao_aee
+			miao_err miao_round_err miao_er miao_round_er
+			miao_ai miao_ei miao_au miao_ou
+			miao_n miao_ng miao_ei.hmd];
+
+@clsFinaYcmpNorm = [miao_a.ycmp miao_aa.ycmp miao_ahh.ycmp miao_an.ycmp miao_ang.ycmp
+			miao_o.ycmp miao_oo.ycmp miao_wo.ycmp miao_w.ycmp
+			miao_e.ycmp miao_en.ycmp miao_eng.ycmp miao_oey.ycmp
+			miao_i.ycmp miao_ia.ycmp miao_io.ycmp
+			miao_ie.ycmp miao_ii.ycmp
+			miao_u.ycmp miao_ua.ycmp miao_uan.ycmp miao_uang.ycmp
+			miao_uu.ycmp miao_uei.ycmp miao_ung.ycmp
+			miao_y.ycmp miao_yi.ycmp miao_ae.ycmp miao_aee.ycmp
+			miao_err.ycmp miao_round_err.ycmp miao_er.ycmp miao_round_er.ycmp
+			miao_ai.ycmp miao_ei.ycmp miao_ei.ycmphmd miao_au.ycmp miao_ou.ycmp
+			miao_n.ycmp miao_ng.ycmp];
+
+@clsFinaYcmpTop = [miao_iu.ycmp miao_ing.ycmp];					
+
+@clsFinaYcmpDesc = [miao_ian.ycmp miao_iang.ycmp];  
+
+@clsTonesAboveOrBelow = [miao_tone_above miao_tone_below];
+
+@clsPosMark = [miao_tone_right miao_tone_top_right @clsTonesAboveOrBelow];
+
+@clsPos = [miao_tone_right.blnk miao_tone_top_right.blnk miao_tone_above.blnk miao_tone_below.blnk];
+@clsPosRight = [miao_tone_right.blnk miao_tone_top_right.blnk];
+
+@clsPunctuation = [semicolon semicolon.full exclam exclam.full colon colon.full comma comma.full period period.full quotedblright];

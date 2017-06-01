@@ -12,8 +12,8 @@ LICENSE="OFL.txt"
 sourcedir='source/'
 
 langmap = {
-   'hmd' : [['hmdUni'],['Shimenkan']],
-   'lpo' : [['lpoUni'],['Taogu']]
+   'hmd' : [['hmdUni'],['Shimenkan-OT']],
+   'lpo' : [['lpoUni'],['Taogu-OT']]
 }
 
 for l in langmap.keys():
@@ -25,7 +25,8 @@ for l in langmap.keys():
 	font(
      target=process('fonts/' + fontname + '.ttf', *cmds),
 	source=sourcedir + APPNAME + '.sfd',
-    graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
+#    graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
+    opentype = fea("miao.fea", master="source/miao.fea", make_params="-z 8"),
     script = 'plrd'
 )
 

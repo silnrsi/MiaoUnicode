@@ -1,0 +1,553 @@
+include(miao_classes.fea)
+include(miao_aspr.fea)
+include(miao_mark.fea)
+include(miao_mkmk.fea)
+
+
+# GSUB
+
+
+lookup replaceFinalsWithYcmp {
+
+	sub @clsFina by @clsFinaYcmp;
+
+} replaceFinalsWithYcmp;
+
+lookup replaceTonesWithBlank {
+
+	sub @clsPosMark by @clsPos;
+
+} replaceTonesWithBlank;
+
+
+feature clig {
+
+	sub @clsFina'lookup replaceFinalsWithYcmp @clsFina'lookup replaceFinalsWithYcmp @clsFina'lookup replaceFinalsWithYcmp @clsTonesAboveOrBelow;
+	sub @clsFina'lookup replaceFinalsWithYcmp @clsFina'lookup replaceFinalsWithYcmp @clsTonesAboveOrBelow;
+	sub @clsFina'lookup replaceFinalsWithYcmp @clsTonesAboveOrBelow;
+
+	sub @clsFina @clsPosMark'lookup replaceTonesWithBlank;
+	sub @clsFinaYcmp @clsPosMark'lookup replaceTonesWithBlank;
+
+} clig;
+
+
+# GPOS
+
+
+lookup shiftFinalToneRightPosition {
+
+	# /* kern right finals (without aspiration mark) */
+	# clsFina {kern.x =    0m} / clsInitMidNoKern  _ OPT_FINA_SEQ gRight;
+	pos @clsInitMidNoKern @clsFina' <0 0 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos @clsInitMidNoKern @clsFina' <0 0 0 0> @clsFina miao_tone_right.blnk;
+	pos @clsInitMidNoKern @clsFina' <0 0 0 0> miao_tone_right.blnk;
+
+	# clsFina {kern.x =  -80m} / clsInitMidMinKern _ OPT_FINA_SEQ gRight;
+	pos @clsInitMidMinKern @clsFina' <-80 0 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos @clsInitMidMinKern @clsFina' <-80 0 0 0> @clsFina miao_tone_right.blnk;
+	pos @clsInitMidMinKern @clsFina' <-80 0 0 0> miao_tone_right.blnk;
+
+	# clsFina {kern.x = -130m} / clsInitMidMajKern _ OPT_FINA_SEQ gRight;
+	pos @clsInitMidMajKern @clsFina' <-130 0 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos @clsInitMidMajKern @clsFina' <-130 0 0 0> @clsFina miao_tone_right.blnk;
+	pos @clsInitMidMajKern @clsFina' <-130 0 0 0> miao_tone_right.blnk;
+
+	# clsFina {kern.x =  -40m} / clsAsp _ OPT_FINA_SEQ gRight;
+	pos @clsAsp @clsFina' <-40 0 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos @clsAsp @clsFina' <130 0 0 0> @clsFina miao_tone_right.blnk; # value changed
+#	pos @clsAsp @clsFina' <-40 0 0 0> @clsFina miao_tone_right.blnk; # original
+	pos @clsAsp @clsFina' <130 0 0 0> miao_tone_right.blnk; # value changed
+#	pos @clsAsp @clsFina' <-40 0 0 0> miao_tone_right.blnk; # original
+
+} shiftFinalToneRightPosition;
+
+lookup shiftFinalYToneRightPosition {
+
+	# clsFinaStdYShift {shift.y = 219m} / _ OPT_FINA_SEQ gRight ;
+	pos @clsFinaStdYShift' <0 219 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos @clsFinaStdYShift' <0 219 0 0> @clsFina miao_tone_right.blnk;
+	pos @clsFinaStdYShift' <0 219 0 0> miao_tone_right.blnk;
+
+	# gA {shift.y = 219m+80m}  / _ OPT_FINA_SEQ gRight ;
+	pos miao_a' <0 299 0 0> @clsFina @clsFina miao_tone_right.blnk;
+	pos miao_a' <0 299 0 0> @clsFina miao_tone_right.blnk;
+	pos miao_a' <0 299 0 0> miao_tone_right.blnk;
+
+} shiftFinalYToneRightPosition;
+
+lookup shiftFinalToneTopRightPosition {
+
+	# TODO later, clsAspLo -> miao_ref_asp not used by BFM or Lipo
+	# /* kern topright finals with respect to Lo initial kerning class for combinations like V,掳 (values inverted) */
+	# clsFina {kern.x = -90m} / clsInitLoMinKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+	# clsFina {kern.x = -60m} / clsInitLoMajKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+	# clsFina {kern.x =  40m} / clsInitLoChuxKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+
+	# /* kern topright finals with respect to Hi initial kerning class */
+	# clsFina {kern.x =    0m} / clsInitHiNoKern  _ OPT_FINA_SEQ gTopRight;
+	pos @clsInitHiNoKern @clsFina' <0 0 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiNoKern @clsFina' <0 0 0 0> @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiNoKern @clsFina' <0 0 0 0> miao_tone_top_right.blnk;
+
+	# clsFina {kern.x =  -90m} / clsInitHiMinKern _ OPT_FINA_SEQ gTopRight;
+	pos @clsInitHiMinKern @clsFina' <-90 0 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMinKern @clsFina' <-90 0 0 0> @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMinKern @clsFina' <-90 0 0 0> miao_tone_top_right.blnk;
+
+	# clsFina {kern.x = -160m} / clsInitHiMajKern _ OPT_FINA_SEQ gTopRight;
+	pos @clsInitHiMajKern @clsAspHi @clsFina' <60 0 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMajKern @clsAspHi @clsFina' <60 0 0 0> @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMajKern @clsAspHi @clsFina' <60 0 0 0> miao_tone_top_right.blnk;
+
+	pos @clsInitHiMajKern @clsFina' <-160 0 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMajKern @clsFina' <-160 0 0 0> @clsFina miao_tone_top_right.blnk;
+	pos @clsInitHiMajKern @clsFina' <-160 0 0 0> miao_tone_top_right.blnk;
+
+	# clsFina {kern.x =   10m} / clsAspHi _ OPT_FINA_SEQ gTopRight;
+#	pos @clsAspHi @clsFina' <10 0 0 0> @clsFina miao_tone_top_right.blnk; #original - OK for Android 4.4 but not 7
+	pos @clsAspHi @clsFina' <180 0 0 0> @clsFina miao_tone_top_right.blnk; #value changed
+#	pos @clsAspHi @clsFina' <10 0 0 0> miao_tone_top_right.blnk; #original - OK for Android 4.4 but not 7
+	pos @clsAspHi @clsFina' <190 0 0 0> miao_tone_top_right.blnk; #value changed
+
+	# TODO later, clsAspLo -> miao_ref_asp not used by BFM or Lipo
+	# clsFina {kern.x = -190m} / clsInitHiNoKern  clsAspLo _ OPT_FINA_SEQ gTopRight;
+	# clsFina {kern.x = -240m} / clsInitHiMinKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+	# clsFina {kern.x = -340m} / clsInitHiMajKern clsAspLo _ OPT_FINA_SEQ gTopRight;
+	
+} shiftFinalToneTopRightPosition;
+
+lookup shiftFinalYToneTopRightPosition {
+
+	# /* shift final(s) up to "tone top right" position (438m, 2/3 of cap height) */
+	# clsFinaStdYShift {shift.y = 438m} / _ OPT_FINA_SEQ gTopRight ;
+	pos @clsFinaStdYShift' <0 438 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos @clsFinaStdYShift' <0 438 0 0> @clsFina miao_tone_top_right.blnk;
+	pos @clsFinaStdYShift' <0 438 0 0> miao_tone_top_right.blnk;
+
+	# gA {shift.y = 438m+160m} / _ OPT_FINA_SEQ gTopRight ;
+	pos miao_a' <0 598 0 0> @clsFina @clsFina miao_tone_top_right.blnk;
+	pos miao_a' <0 598 0 0> @clsFina miao_tone_top_right.blnk;
+	pos miao_a' <0 598 0 0> miao_tone_top_right.blnk;
+
+} shiftFinalYToneTopRightPosition;
+
+lookup kernBaselineFinals {
+
+	# /* kern baseline finals with respect to Hi initial kerning class for combinations like A'o (values inverted) */
+	#  clsFina {kern.x =  -90m} / clsInitHiMinKern clsAspHi _ ;
+	ignore pos @clsInitHiMinKern @clsAspHi @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitHiMinKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitHiMinKern @clsAspHi @clsFina' @clsPos;
+	pos @clsInitHiMinKern @clsAspHi @clsFina' <-90 0 0 0>;
+
+	#  clsFina {kern.x =  -20m} / clsInitHiMajKern clsAspHi _ ;
+	ignore pos @clsInitHiMajKern @clsAspHi @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitHiMajKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitHiMajKern @clsAspHi @clsFina' @clsPos;
+	pos @clsInitHiMajKern @clsAspHi @clsFina' <-20 0 0 0>;
+
+	# /* kern baseline finals with respect to Lo initial kerning class */
+	#  clsFina {kern.x =  -60m} / clsInitLoMinKern _ ;
+	ignore pos @clsInitLoMinKern @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoMinKern @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoMinKern @clsFina' @clsPos;
+	pos @clsInitLoMinKern @clsFina' <-60 0 0 0>;
+
+	#  clsFina {kern.x = -160m} / clsInitLoMajKern _ ;
+	ignore pos @clsInitLoMajKern @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoMajKern @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoMajKern @clsFina' @clsPos;
+	pos @clsInitLoMajKern @clsFina' <-160 0 0 0>;
+
+	#  clsFina {kern.x = -320m} / clsInitLoChuxKern _ ;
+	ignore pos @clsInitLoChuxKern @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoChuxKern @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoChuxKern @clsFina' @clsPos;
+	pos @clsInitLoChuxKern @clsFina' <-320 0 0 0>;
+
+	#  clsFina {kern.x = -190m} / clsInitLoNoKern  clsAspHi _ ;
+	ignore pos @clsInitLoNoKern @clsAspHi @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoNoKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoNoKern @clsAspHi @clsFina' @clsPos;
+#	pos @clsInitLoNoKern @clsAspHi @clsFina' <-190 0 0 0>; #original
+	pos @clsInitLoNoKern @clsAspHi @clsFina' <-50 0 0 0>; #value changed
+
+	#  clsFina {kern.x = -220m} / clsInitLoMinKern clsAspHi _ ;
+	ignore pos @clsInitLoMinKern @clsAspHi @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoMinKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoMinKern @clsAspHi @clsFina' @clsPos;
+#	pos @clsInitLoMinKern @clsAspHi @clsFina' <-220 0 0 0>; #original
+#	pos @clsInitLoMinKern @clsAspHi @clsFina' <-50 0 0 0>; #value changed, may not be needed
+
+	#  clsFina {kern.x = -300m} / clsInitLoMajKern clsAspHi _ ;
+	ignore pos @clsInitLoMajKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoMajKern @clsAspHi @clsFina' @clsPos;
+#	pos @clsInitLoMajKern @clsAspHi @clsFina' <-300 0 0 0>; #original
+	pos @clsInitLoMajKern @clsAspHi @clsFina' <-100 0 0 0>; #value changed
+
+	#  clsFina {kern.x = -480m} / clsInitLoChuxKern clsAspHi _ ;
+	ignore pos @clsInitLoChuxKern @clsAspHi @clsFina' @clsFina @clsFina @clsPos;
+	ignore pos @clsInitLoChuxKern @clsAspHi @clsFina' @clsFina @clsPos;
+	ignore pos @clsInitLoChuxKern @clsAspHi @clsFina' @clsPos;
+	pos @clsInitLoChuxKern @clsAspHi @clsFina' <-480 0 0 0>;
+
+} kernBaselineFinals;
+
+lookup punctuationKerning {
+
+	pos [uni3001 uni3001.lpo]' <250 0 250 0>;
+	pos @clsPunctuation' <200 0 200 0>;
+
+} punctuationKerning;
+
+lookup addAdvancedWidthFinals {
+
+	pos miao_a <0 0 324 0>;
+	pos miao_aa <0 0 421 0>;
+	pos miao_ahh <0 0 295 0>;
+	pos miao_an <0 0 355 0>;
+	pos miao_ang <0 0 356 0>;
+	pos miao_o <0 0 296 0>;
+	pos miao_oo <0 0 367 0>;
+	pos miao_wo <0 0 294 0>;
+	pos miao_w <0 0 253 0>;
+	pos miao_e <0 0 292 0>;
+	pos miao_en <0 0 266 0>;
+	pos miao_eng <0 0 439 0>;
+	pos miao_oey <0 0 253 0>;
+	pos miao_i <0 0 293 0>;
+	pos miao_ia <0 0 418 0>;
+	pos miao_ian <0 0 466 0>;
+	pos miao_iang <0 0 462 0>;
+	pos miao_io <0 0 443 0>;
+	pos miao_ie <0 0 294 0>;
+	pos miao_ii <0 0 429 0>;
+	pos miao_iu <0 0 430 0>;
+	pos miao_ing <0 0 451 0>;
+	pos miao_u <0 0 295 0>;
+	pos miao_ua <0 0 420 0>;
+	pos miao_uan <0 0 581 0>;
+	pos miao_uang <0 0 575 0>;
+	pos miao_uu <0 0 429 0>;
+	pos miao_uei <0 0 424 0>;
+	pos miao_ung <0 0 469 0>;
+	pos miao_y <0 0 290 0>;
+	pos miao_yi <0 0 298 0>;
+	pos miao_ae <0 0 257 0>;
+	pos miao_aee <0 0 256 0>;
+	pos miao_err <0 0 278 0>;
+	pos miao_round_err <0 0 289 0>;
+	pos miao_er <0 0 279 0>;
+	pos miao_round_er <0 0 292 0>;
+	pos miao_ai <0 0 133 0>;
+	pos miao_ei <0 0 290 0>;
+	pos miao_au <0 0 291 0>;
+	pos miao_ou <0 0 294 0>;
+	pos miao_n <0 0 298 0>;
+	pos miao_ng <0 0 301 0>;
+	pos miao_ei.hmd <0 0 216 0>;
+
+} addAdvancedWidthFinals;
+
+lookup combinationsKerning {
+
+	pos @clsInit @clsAspHi @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
+	pos @clsInit @clsAspHi @clsFina @clsPosRight space' <0 0 450 0>;
+
+	pos @clsInit @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
+	pos @clsInit @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
+
+	pos @clsInit @clsFina @clsPosRight space' <0 0 250 0>;
+	pos @clsInit @clsFina @clsPosRight @clsInit' <300 0 300 0>;
+	
+	pos @clsInit @clsAspHi @clsFina @clsFina space' <0 0 400 0>;
+	pos @clsInit @clsAspHi @clsFina space' <0 0 250 0>;
+
+	pos @clsInit @clsFina @clsFina space [miao_nasal @clsInit]' <500 0 500 0>;
+	pos @clsInit @clsFina space' <0 0 300 0>;
+	pos @clsFina @clsInit' <300 0 300 0>;
+
+} combinationsKerning;
+
+
+feature kern {
+
+	pos miao_asp' <-150 0 0 0> @clsInit;
+
+	lookup shiftFinalToneRightPosition;
+	lookup shiftFinalYToneRightPosition;
+
+	lookup shiftFinalToneTopRightPosition;
+	lookup shiftFinalYToneTopRightPosition;
+
+	lookup kernBaselineFinals;
+
+	lookup addAdvancedWidthFinals;
+
+	lookup combinationsKerning;
+	lookup punctuationKerning;
+
+} kern;
+
+
+#feature dist {
+
+#	lookup addAdvancedWidthFinals;
+
+#} dist;
+
+
+lookup attachAspMark {
+
+	pos @clsInit @clsFinaYcmp @clsPos @clsAspHi'lookup at_aspHiS_with_aspHiM;
+	pos @clsInit @clsAspHi'lookup at_aspHiS_with_aspHiM;
+	pos @clsInit @clsAspLo'lookup at_aspLoS_with_aspLoM;
+
+} attachAspMark;
+
+lookup finalsAbove {
+
+	# 3 finals on top
+	pos @clsInit @clsFinaYcmp'lookup at_aboveNormS3_with_NormL @clsFinaYcmp @clsFinaYcmp miao_tone_above.blnk;
+
+	# 2 finals on top
+	pos @clsInit @clsAsp @clsFinaYcmp'lookup at_aboveNormS_with_NormL @clsFinaYcmp miao_tone_above.blnk;
+	pos @clsInit @clsFinaYcmp'lookup at_aboveNormS_with_NormL @clsFinaYcmp miao_tone_above.blnk;
+
+	# 1 final on top
+	pos @clsInit @clsAsp @clsFinaYcmp'lookup at_aboveNormS_with_NormM miao_tone_above.blnk;
+	pos @clsInit @clsFinaYcmp'lookup at_aboveNormS_with_NormM miao_tone_above.blnk;
+
+} finalsAbove;
+
+lookup finalsBelow {
+	# TODO later, bottom position not used by BFM or Lipo
+	pos @clsInit @clsFinaYcmp'lookup at_belowNormS_with_NormM miao_tone_below.blnk;
+
+} finalsBelow;
+
+
+feature mark {
+
+	lookup attachAspMark;
+	lookup finalsAbove;
+	lookup finalsBelow;
+
+} mark;
+
+feature mkmk {
+
+	pos @clsFina'lookup regularSizedFinals;
+	pos @clsFinaYcmp'lookup at_NormL_with_NormR;
+
+} mkmk;
+
+
+@GDEF_Simple = [space A B C D E F G H I J K 
+	L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u 
+	v w x y z Agrave Aacute Acircumflex Atilde Adieresis Amacron Abreve 
+	Aring uni01CD uni1EA0 uni1EA2 uni1EA4 uni1EA6 uni1EA8 uni1EAA uni1EAC 
+	uni1EAE uni1EB0 uni1EB2 uni1EB4 uni1EB6 Aogonek AE Ccedilla Cacute 
+	Ccircumflex Ccaron Cdotaccent Dcaron uni1E0C uni1E0E Dcroat Egrave 
+	Eacute Ecircumflex Ecaron Edieresis Emacron Ebreve Edotaccent uni1EB8 
+	uni1EBA uni1EBC uni1EBE uni1EC0 uni1EC2 uni1EC4 uni1EC6 Eogonek 
+	Gcircumflex Gbreve Gdotaccent uni0122 Gcaron uni1E20 Hcircumflex 
+	uni1E24 uni1E2A Hbar Igrave Iacute Icircumflex Itilde Idieresis Imacron 
+	Idotaccent uni01CF uni1EC8 uni1ECA Iogonek Jcircumflex uni0136 Lacute 
+	Lcaron uni013B Ldot uni1E36 uni1E38 uni1E3A Lslash uni1E42 Nacute 
+	Ncaron Ntilde uni0145 uni1E44 uni1E46 uni1E48 Ograve Oacute Ocircumflex 
+	Otilde Odieresis Omacron Ohungarumlaut uni01D1 uni1ECC uni1ECE uni1ED0 
+	uni1ED2 uni1ED4 uni1ED6 uni1ED8 Oslash OE Ohorn uni1EDA uni1EDC uni1EDE 
+	uni1EE0 uni1EE2 uni01EA Racute Rcaron uni0156 uni1E5A uni1E5C uni1E5E 
+	Sacute Scircumflex Scaron uni015E uni0218 uni1E60 uni1E62 uni1E9E 
+	Tcaron uni0162 uni021A uni1E6C uni1E6E Ugrave Uacute Ucircumflex Utilde 
+	Udieresis Umacron Ubreve Uring Uhungarumlaut uni01D3 uni01D5 uni01D7 
+	uni01D9 uni01DB uni1EE4 uni1EE6 Uogonek Uhorn uni1EE8 uni1EEA uni1EEC 
+	uni1EEE uni1EF0 Wgrave Wacute Wcircumflex Wdieresis Ygrave Yacute 
+	Ycircumflex Ydieresis uni1E8E uni1EF4 uni1EF6 uni1EF8 Zacute Zcaron 
+	Zdotaccent uni1E92 Eth Thorn uni018F agrave aacute acircumflex atilde 
+	adieresis amacron abreve aring uni01CE uni1EA1 uni1EA3 uni1EA5 uni1EA7 
+	uni1EA9 uni1EAB uni1EAD uni1EAF uni1EB1 uni1EB3 uni1EB5 uni1EB7 aogonek 
+	ae ccedilla cacute ccircumflex ccaron cdotaccent uni1E0D uni1E0F dcroat 
+	egrave eacute ecircumflex ecaron edieresis emacron ebreve edotaccent 
+	uni1EB9 uni1EBB uni1EBD uni1EBF uni1EC1 uni1EC3 uni1EC5 uni1EC7 eogonek 
+	gcircumflex gbreve gdotaccent gcaron uni1E21 hcircumflex uni1E25 
+	uni1E2B hbar igrave iacute icircumflex itilde idieresis imacron uni01D0 
+	uni1EC9 uni1ECB iogonek.d dotlessi jcircumflex uni0137 kgreenlandic 
+	lacute ldot uni013C uni1E37 uni1E39 uni1E3B lslash uni1E43 nacute 
+	ncaron ntilde uni0146 uni1E45 uni1E47 uni1E49 napostrophe ograve oacute 
+	ocircumflex otilde odieresis omacron ohungarumlaut uni01D2 uni1ECD 
+	uni1ECF uni1ED1 uni1ED3 uni1ED5 uni1ED7 uni1ED9 oslash oe ohorn uni1EDB 
+	uni1EDD uni1EDF uni1EE1 uni1EE3 uni01EB racute uni0157 rcaron uni1E5B 
+	uni1E5D uni1E5F sacute scircumflex scaron uni015F uni0219 uni1E61 
+	uni1E63 germandbls uni0163 uni021B uni1E6D uni1E6F uni1E97 ugrave 
+	uacute ucircumflex utilde udieresis umacron ubreve uring uhungarumlaut 
+	uni01D4 uni01D6 uni01D8 uni01DA uni01DC uni1EE5 uni1EE7 uogonek uhorn 
+	uni1EE9 uni1EEB uni1EED uni1EEF uni1EF1 wgrave wacute wcircumflex 
+	wdieresis ygrave yacute ycircumflex ydieresis uni1E8F uni1EF5 uni1EF7 
+	uni1EF9 zacute zcaron zdotaccent uni1E93 eth thorn uni0237 uni0251 
+	uni0259 uni0261 fi fl I.a Igrave.a Iacute.a Icircumflex.a Itilde.a 
+	Idieresis.a Imacron.a Idotaccent.a uni01CF.a uni1EC8.a uni1ECA.a 
+	Iogonek.a a.a agrave.a aacute.a acircumflex.a atilde.a adieresis.a 
+	amacron.a abreve.a aring.a uni01CE.a uni1EA1.a uni1EA3.a uni1EA5.a 
+	uni1EA7.a uni1EA9.a uni1EAB.a uni1EAD.a uni1EAF.a uni1EB1.a uni1EB3.a 
+	uni1EB5.a uni1EB7.a aogonek.a g.a gcircumflex.a gbreve.a gdotaccent.a 
+	gcaron.a uni1E21.a uni00670303.a l.a lacute.a lcaron.a ldot.a uni013C.a 
+	uni1E37.a uni1E39.a uni1E3B.a lslash.a fl.a ampersand zero one two 
+	three four five six seven eight nine zero.pnum one.pnum two.pnum 
+	three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum 
+	zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum six.tnum 
+	seven.tnum eight.tnum nine.tnum zero.onum one.onum two.onum three.onum 
+	four.onum five.onum six.onum seven.onum eight.onum nine.onum period 
+	comma colon semicolon ellipsis exclam exclamdown question questiondown 
+	quotesingle quotedbl quoteleft quoteright quotedblleft quotedblright 
+	quotesinglbase quotedblbase guilsinglleft guilsinglright guillemotleft 
+	guillemotright hyphen uni00AD endash emdash figuredash uni2015 
+	periodcentered bullet underscore parenleft parenright bracketleft 
+	bracketright braceleft braceright slash bar backslash brokenbar 
+	asterisk dagger daggerdbl section paragraph copyright uni2117 
+	registered trademark uni2120 at at.case numbersign zero.sups one.sups 
+	two.sups three.sups four.sups five.sups six.sups seven.sups eight.sups 
+	nine.sups parenleft.sups parenright.sups period.sups comma.sups 
+	zero.subs one.subs two.subs three.subs four.subs five.subs six.subs 
+	seven.subs eight.subs nine.subs parenleft.subs parenright.subs 
+	period.subs comma.subs zero.dnom one.dnom two.dnom three.dnom four.dnom 
+	five.dnom six.dnom seven.dnom eight.dnom nine.dnom parenleft.dnom 
+	parenright.dnom period.dnom comma.dnom zero.numr one.numr two.numr 
+	three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr 
+	parenleft.numr parenright.numr period.numr comma.numr ordfeminine 
+	ordfeminine.a ordmasculine a.sups b.sups c.sups d.sups e.sups f.sups 
+	g.sups h.sups i.sups j.sups k.sups l.sups m.sups n.sups o.sups p.sups 
+	q.sups r.sups s.sups t.sups u.sups v.sups w.sups x.sups y.sups z.sups 
+	egrave.sups eacute.sups uni0259.sups a.supa g.supa l.supa degree 
+	currency dollar sterling yen Euro cent uni0192 colonmonetary lira 
+	uni20A6 peseta dong uni20B1 uni20B2 uni20B5 uni20B9 uni20BA fraction 
+	uni2215 slash.frac percent perthousand onequarter onehalf threequarters 
+	onethird twothirds oneeighth threeeighths fiveeighths seveneighths plus 
+	minus multiply divide uni2219 equal less greater lessequal greaterequal 
+	plusminus asciicircum notequal asciitilde approxequal logicalnot pi 
+	infinity uni00B5 partialdiff integral radical uni2206 uni2126 summation 
+	product uni2113 estimated uni2190 arrowup uni2192 arrowdown uni25A0 
+	uni25C6 uni25C9 uni2752 triagup uni25B3 uni25B6 uni25B7 triagdn uni25BD 
+	uni25C0 uni25C1 uni2610 uni2611 uni2713 uni266A lozenge uni2032 uni2033 
+	uni02BB uni02BC uni02BE uni02BF grave acute circumflex caron uni02C8 
+	uni02C9 uni02CA uni02CB uni02CC tilde dieresis macron breve ring 
+	hungarumlaut dotaccent cedilla ogonek uni030C.a uni00A0 uni2007 
+	space.frac nbspace.frac uni0243 uni012C uni014E uni0180 uni012D uni014F 
+	uni1E06 uni1E07 uni1E34 uni1E35 uni1E16 uni1E17 uni1E52 uni1E53 uni2016 
+	uni203D uni231C uni231D uni231E uni231F uni27E6 uni27E7 uni2E22 uni2E23 
+	uni2E24 uni2E25 zero.0 zero.0s zero.0p zero.0ps i.trk A.sc B.sc C.sc 
+	D.sc E.sc F.sc G.sc H.sc I.sc J.sc K.sc L.sc M.sc N.sc O.sc P.sc Q.sc 
+	R.sc S.sc T.sc U.sc V.sc W.sc X.sc Y.sc Z.sc Agrave.sc Aacute.sc 
+	Acircumflex.sc Atilde.sc Adieresis.sc Amacron.sc Abreve.sc Aring.sc 
+	uni01CD.sc uni1EA0.sc uni1EA2.sc uni1EA4.sc uni1EA6.sc uni1EA8.sc 
+	uni1EAA.sc uni1EAC.sc uni1EAE.sc uni1EB0.sc uni1EB2.sc uni1EB4.sc 
+	uni1EB6.sc Aogonek.sc AE.sc uni0243.sc uni1E06.sc Ccedilla.sc Cacute.sc 
+	Ccircumflex.sc Ccaron.sc Cdotaccent.sc Dcaron.sc uni1E0C.sc uni1E0E.sc 
+	Dcroat.sc Egrave.sc Eacute.sc Ecircumflex.sc Ecaron.sc Edieresis.sc 
+	Emacron.sc Ebreve.sc Edotaccent.sc uni1EB8.sc uni1EBA.sc uni1EBC.sc 
+	uni1EBE.sc uni1EC0.sc uni1EC2.sc uni1EC4.sc uni1EC6.sc Eogonek.sc 
+	uni1E16.sc Gcircumflex.sc Gbreve.sc Gdotaccent.sc uni0122.sc Gcaron.sc 
+	uni1E20.sc uni00470303.sc Hcircumflex.sc uni1E24.sc uni1E2A.sc Hbar.sc 
+	Igrave.sc Iacute.sc Icircumflex.sc Itilde.sc Idieresis.sc Imacron.sc 
+	Idotaccent.sc uni01CF.sc uni1EC8.sc uni1ECA.sc Iogonek.sc uni012C.sc 
+	Jcircumflex.sc uni0136.sc uni1E34.sc Lacute.sc Lcaron.sc uni013B.sc 
+	Ldot.sc uni1E36.sc uni1E38.sc uni1E3A.sc Lslash.sc uni1E42.sc Nacute.sc 
+	Ncaron.sc Ntilde.sc uni0145.sc uni1E44.sc uni1E46.sc uni1E48.sc 
+	Ograve.sc Oacute.sc Ocircumflex.sc Otilde.sc Odieresis.sc Omacron.sc 
+	Ohungarumlaut.sc uni01D1.sc uni1ECC.sc uni1ECE.sc uni1ED0.sc uni1ED2.sc 
+	uni1ED4.sc uni1ED6.sc uni1ED8.sc Oslash.sc OE.sc Ohorn.sc uni1EDA.sc 
+	uni1EDC.sc uni1EDE.sc uni1EE0.sc uni1EE2.sc uni01EA.sc uni014E.sc 
+	uni1E52.sc Racute.sc Rcaron.sc uni0156.sc uni1E5A.sc uni1E5C.sc 
+	uni1E5E.sc Sacute.sc Scircumflex.sc Scaron.sc uni015E.sc uni0218.sc 
+	uni1E60.sc uni1E62.sc germandbls.sc uni1E9E.sc Tcaron.sc uni0162.sc 
+	uni021A.sc uni1E6C.sc uni1E6E.sc Ugrave.sc Uacute.sc Ucircumflex.sc 
+	Utilde.sc Udieresis.sc Umacron.sc Ubreve.sc Uring.sc Uhungarumlaut.sc 
+	uni01D3.sc uni01D5.sc uni01D7.sc uni01D9.sc uni01DB.sc uni1EE4.sc 
+	uni1EE6.sc Uogonek.sc Uhorn.sc uni1EE8.sc uni1EEA.sc uni1EEC.sc 
+	uni1EEE.sc uni1EF0.sc Wgrave.sc Wacute.sc Wcircumflex.sc Wdieresis.sc 
+	Ygrave.sc Yacute.sc Ycircumflex.sc Ydieresis.sc uni1E8E.sc uni1EF4.sc 
+	uni1EF6.sc uni1EF8.sc Zacute.sc Zcaron.sc Zdotaccent.sc uni1E92.sc 
+	Eth.sc Thorn.sc uni018F.sc ampersand.sc zero.sc one.sc two.sc three.sc 
+	four.sc five.sc six.sc seven.sc eight.sc nine.sc hyphen.sc endash.sc 
+	emdash.sc uni02B9 A.sups B.sups C.sups D.sups E.sups F.sups G.sups 
+	H.sups I.sups J.sups K.sups L.sups M.sups N.sups O.sups P.sups Q.sups 
+	R.sups S.sups T.sups U.sups V.sups W.sups X.sups Y.sups Z.sups 
+	colon.sups hyphen.sups endash.sups emdash.sups uni03040301 
+	uni03040301.cap uniFEFF miao_pa miao_ba miao_yi_pa 
+	miao_pla miao_ma miao_mha miao_arch_ma miao_fa miao_va miao_vfa miao_ta 
+	miao_da miao_yi_tta miao_yi_ta miao_tta miao_dda miao_na miao_nha 
+	miao_yi_nna miao_arch_na miao_nna miao_nnha miao_la miao_lya miao_lha 
+	miao_lhya miao_tlha miao_dlha miao_tlhya miao_dlhya miao_ka miao_ga 
+	miao_yi_ka miao_qa miao_qga miao_nga miao_ngha miao_arch_nga miao_ha 
+	miao_xa miao_gha miao_ghha miao_tssa miao_dzza miao_nya miao_nyha 
+	miao_tsha miao_dzha miao_yi_tsha miao_yi_dzha miao_ref_tsha miao_sha 
+	miao_ssa miao_zha miao_zsha miao_tsa miao_dza miao_yi_tsa miao_sa 
+	miao_za miao_zsa miao_zza miao_zzsa miao_arch_zza miao_zzya miao_zzsya 
+	miao_wa miao_ah miao_hha miao_nasal miao_tone2 miao_tone3 miao_tone4 
+	miao_tone5 miao_tone6 miao_tone7 miao_tone8 miao_ref_tone1 
+	miao_ref_tone2 miao_ref_tone4 miao_ref_tone5 miao_ref_tone6 
+	miao_ref_tone8 lisu_ba lisu_pa lisu_pha lisu_da lisu_ta lisu_tha 
+	lisu_ga lisu_ka lisu_kha lisu_ja lisu_ca lisu_cha lisu_dza lisu_tsa 
+	lisu_tsha lisu_ma lisu_na lisu_la lisu_sa lisu_zha lisu_za lisu_nga 
+	lisu_ha lisu_xa lisu_hha lisu_fa lisu_wa lisu_sha lisu_ya lisu_gha 
+	lisu_a lisu_ae lisu_e lisu_eu lisu_i lisu_o lisu_u lisu_ue lisu_uh 
+	lisu_oe lisu_tone_mya_ti lisu_tone_na_po lisu_tone_mya_cya 
+	lisu_tone_mya_bo lisu_tone_mya_na lisu_tone_mya_jeu lisu_comma 
+	lisu_full_stop miao_sha.salt miao_ssa.salt miao_ba.chux miao_mha.chux 
+	miao_vfa.chux miao_da.chux miao_dda.chux miao_nha.chux miao_nnha.chux 
+	miao_lya.chux miao_lhya.chux miao_dlha.chux miao_dlhya.chux 
+	miao_ga.chux miao_qga.chux miao_ngha.chux miao_ghha.chux miao_dzza.chux 
+	miao_nyha.chux miao_dzha.chux miao_zsha.chux miao_dza.chux 
+	miao_zsa.chux miao_zzsa.chux miao_zzsya.chux miao_hha.chux miao_ma.aspl 
+	miao_mha.aspl miao_arch_ma.aspl miao_na.aspl miao_nha.aspl 
+	miao_yi_nna.aspl miao_arch_na.aspl miao_nna.aspl miao_nnha.aspl 
+	miao_nga.aspl miao_ngha.aspl miao_arch_nga.aspl miao_mha.chux.aspl 
+	miao_nha.chux.aspl miao_nnha.chux.aspl miao_ngha.chux.aspl dot.chux 
+	lisu_ba.sc lisu_pa.sc lisu_pha.sc lisu_da.sc lisu_ta.sc lisu_tha.sc 
+	lisu_ga.sc lisu_ka.sc lisu_kha.sc lisu_ja.sc lisu_ca.sc lisu_cha.sc 
+	lisu_dza.sc lisu_tsa.sc lisu_tsha.sc lisu_ma.sc lisu_na.sc lisu_la.sc 
+	lisu_sa.sc lisu_zha.sc lisu_za.sc lisu_nga.sc lisu_ha.sc lisu_xa.sc 
+	lisu_hha.sc lisu_fa.sc lisu_wa.sc lisu_sha.sc lisu_ya.sc lisu_gha.sc 
+	lisu_a.sc lisu_ae.sc lisu_e.sc lisu_eu.sc lisu_i.sc lisu_o.sc lisu_u.sc 
+	lisu_ue.sc lisu_uh.sc lisu_oe.sc uni02CD miao_sha.lpo miao_na.lpo 
+	miao_ma.lpo miao_nga.lpo uni3000 uni3001 uni300A uni300B exclam.full 
+	parenleft.full parenright.full comma.full period.full colon.full 
+	semicolon.full question.full uni3001.lpo ];
+@GDEF_Ligature = [uni00470303 dcaron uni0123 uni00670303 iogonek lcaron 
+	tcaron f_f f_t uni0123.a ];
+@GDEF_Mark = [uni0300 uni0300.cap uni0301 uni0301.cap uni0302 uni0302.cap 
+	uni0303 uni0303.cap uni0304 uni0304.cap uni0306 uni0306.cap uni0307 
+	uni0307.cap uni0308 uni0308.cap uni0309 uni0309.cap uni030A uni030A.cap 
+	uni030B uni030B.cap uni030C uni030C.cap uni030F uni030F.cap uni0312 
+	uni0313 uni031B uni0323 uni0324 uni0326 uni0327 uni0327.cap uni0328 
+	uni0328.cap uni032E uni0331 uni03080304 uni03080304.cap uni03080301 
+	uni03080301.cap uni0308030C uni0308030C.cap uni03080300 uni03080300.cap 
+	uni03020301 uni03020301.cap uni03020300 uni03020300.cap uni03020309 
+	uni03020309.cap uni03020303 uni03020303.cap uni03060301 uni03060301.cap 
+	uni03060300 uni03060300.cap uni03060309 uni03060309.cap uni03060303 
+	uni03060303.cap uni0326.a uni03020306 uni03020306.cap miao_a.ycmp 
+	miao_aa.ycmp miao_ahh.ycmp miao_an.ycmp miao_ang.ycmp miao_o.ycmp 
+	miao_oo.ycmp miao_wo.ycmp miao_w.ycmp miao_e.ycmp miao_en.ycmp 
+	miao_eng.ycmp miao_oey.ycmp miao_i.ycmp miao_ia.ycmp miao_ian.ycmp 
+	miao_iang.ycmp miao_io.ycmp miao_ie.ycmp miao_ii.ycmp miao_iu.ycmp 
+	miao_ing.ycmp miao_u.ycmp miao_ua.ycmp miao_uan.ycmp miao_uang.ycmp 
+	miao_uu.ycmp miao_uei.ycmp miao_ung.ycmp miao_y.ycmp miao_yi.ycmp 
+	miao_ae.ycmp miao_aee.ycmp miao_err.ycmp miao_round_err.ycmp 
+	miao_er.ycmp miao_round_er.ycmp miao_ai.ycmp miao_ei.ycmp miao_au.ycmp 
+	miao_ou.ycmp miao_n.ycmp miao_ng.ycmp miao_asp miao_ref_voice 
+	miao_ref_asp miao_a miao_aa miao_ahh miao_an miao_ang miao_o miao_oo 
+	miao_wo miao_w miao_e miao_en miao_eng miao_oey miao_i miao_ia miao_ian 
+	miao_iang miao_io miao_ie miao_ii miao_iu miao_ing miao_u miao_ua 
+	miao_uan miao_uang miao_uu miao_uei miao_ung miao_y miao_yi miao_ae 
+	miao_aee miao_err miao_round_err miao_er miao_round_er miao_ai miao_ei 
+	miao_au miao_ou miao_n miao_ng miao_ei.hmd miao_ei.ycmphmd miao_tone_right miao_tone_top_right 
+	miao_tone_above miao_tone_below miao_tone_right.blnk miao_tone_top_right.blnk 
+	miao_tone_above.blnk miao_tone_below.blnk];
+
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
+
+} GDEF;
