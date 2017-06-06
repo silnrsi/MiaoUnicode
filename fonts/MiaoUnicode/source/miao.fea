@@ -194,81 +194,28 @@ lookup kernBaselineFinals {
 
 } kernBaselineFinals;
 
-lookup punctuationKerning {
+lookup addRSB {
 
-	pos [uni3001 uni3001.lpo]' <250 0 250 0>;
-	pos @clsPunctuation' <200 0 200 0>;
+	pos @clsInit' <0 0 750 0> @clsAspHi'<-750 0 0 0> @clsFina'<-750 0 0 0> @clsFina @clsPosRight;
 
-} punctuationKerning;
+	pos @clsInit' <0 0 600 0> @clsAspHi'<-600 0 0 0> @clsFina400_500'<-600 0 0 0> @clsPosRight;
+	pos @clsInit' <0 0 550 0> @clsAspHi'<-550 0 0 0> @clsFina300_400'<-550 0 0 0> @clsPosRight;
+	pos @clsInit' <0 0 450 0> @clsAspHi'<-450 0 0 0> @clsFina200_300'<-450 0 0 0> @clsPosRight;
+	pos @clsInit' <0 0 200 0> @clsAspHi @clsFinaYcmp miao_tone_above.blnk;
 
-lookup addAdvancedWidthFinals {
+	pos @clsInit' <0 0 650 0> @clsAspHi @clsFina200_300'<-650 0 0 0> @clsFina;
 
-	pos miao_a <0 0 324 0>;
-	pos miao_aa <0 0 421 0>;
-	pos miao_ahh <0 0 295 0>;
-	pos miao_an <0 0 355 0>;
-	pos miao_ang <0 0 356 0>;
-	pos miao_o <0 0 296 0>;
-	pos miao_oo <0 0 367 0>;
-	pos miao_wo <0 0 294 0>;
-	pos miao_w <0 0 253 0>;
-	pos miao_e <0 0 292 0>;
-	pos miao_en <0 0 266 0>;
-	pos miao_eng <0 0 439 0>;
-	pos miao_oey <0 0 253 0>;
-	pos miao_i <0 0 293 0>;
-	pos miao_ia <0 0 418 0>;
-	pos miao_ian <0 0 466 0>;
-	pos miao_iang <0 0 462 0>;
-	pos miao_io <0 0 443 0>;
-	pos miao_ie <0 0 294 0>;
-	pos miao_ii <0 0 429 0>;
-	pos miao_iu <0 0 430 0>;
-	pos miao_ing <0 0 451 0>;
-	pos miao_u <0 0 295 0>;
-	pos miao_ua <0 0 420 0>;
-	pos miao_uan <0 0 581 0>;
-	pos miao_uang <0 0 575 0>;
-	pos miao_uu <0 0 429 0>;
-	pos miao_uei <0 0 424 0>;
-	pos miao_ung <0 0 469 0>;
-	pos miao_y <0 0 290 0>;
-	pos miao_yi <0 0 298 0>;
-	pos miao_ae <0 0 257 0>;
-	pos miao_aee <0 0 256 0>;
-	pos miao_err <0 0 278 0>;
-	pos miao_round_err <0 0 289 0>;
-	pos miao_er <0 0 279 0>;
-	pos miao_round_er <0 0 292 0>;
-	pos miao_ai <0 0 133 0>;
-	pos miao_ei <0 0 290 0>;
-	pos miao_au <0 0 291 0>;
-	pos miao_ou <0 0 294 0>;
-	pos miao_n <0 0 298 0>;
-	pos miao_ng <0 0 301 0>;
-	pos miao_ei.hmd <0 0 216 0>;
+	pos @clsInit' <0 0 650 0> @clsFina' <-650 0 0 0> @clsFina;
 
-} addAdvancedWidthFinals;
+	pos @clsInit' <0 0 400 0> @clsFina400_500' <-400 0 0 0> @clsPosRight;
+	pos @clsInit' <0 0 300 0> @clsFina300_400' <-300 0 0 0> @clsPosRight;
+	pos @clsInit' <0 0 200 0> @clsFina200_300' <-200 0 0 0> @clsPosRight;
 
-lookup combinationsKerning {
+	pos @clsInit' <0 0 250 0> @clsAspHi @clsFina' <-250 0 0 0>;
 
-	pos @clsInit @clsAspHi @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
-	pos @clsInit @clsAspHi @clsFina @clsPosRight space' <0 0 450 0>;
+	pos @clsInit' <0 0 300 0> @clsFina' <-300 0 0 0>;
 
-	pos @clsInit @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
-	pos @clsInit @clsFina @clsFina @clsPosRight space' <0 0 600 0>;
-
-	pos @clsInit @clsFina @clsPosRight space' <0 0 250 0>;
-	pos @clsInit @clsFina @clsPosRight @clsInit' <300 0 300 0>;
-	
-	pos @clsInit @clsAspHi @clsFina @clsFina space' <0 0 400 0>;
-	pos @clsInit @clsAspHi @clsFina space' <0 0 250 0>;
-
-	pos @clsInit @clsFina @clsFina space [miao_nasal @clsInit]' <500 0 500 0>;
-	pos @clsInit @clsFina space' <0 0 300 0>;
-	pos @clsFina @clsInit' <300 0 300 0>;
-
-} combinationsKerning;
+} addRSB;
 
 
 feature kern {
@@ -282,21 +229,9 @@ feature kern {
 	lookup shiftFinalYToneTopRightPosition;
 
 	lookup kernBaselineFinals;
-
-	lookup addAdvancedWidthFinals;
-
-	lookup combinationsKerning;
-	lookup punctuationKerning;
+	lookup addRSB;
 
 } kern;
-
-
-#feature dist {
-
-#	lookup addAdvancedWidthFinals;
-
-#} dist;
-
 
 lookup attachAspMark {
 

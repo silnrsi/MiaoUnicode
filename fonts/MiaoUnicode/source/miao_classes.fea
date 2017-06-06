@@ -216,11 +216,19 @@
 
 @clsFinaYcmpDesc = [miao_ian.ycmp miao_iang.ycmp];  
 
+@clsFina100 = [miao_ai];
+
+@clsFina200_300 = [miao_ahh miao_o miao_wo miao_w miao_e miao_en miao_oey miao_i miao_ie miao_u miao_y miao_yi miao_ae miao_aee miao_err miao_round_err miao_er miao_round_er miao_ei miao_au miao_ou miao_n miao_ei.hmd];
+
+@clsFina300_400 = [miao_a miao_an miao_ang miao_oo miao_ng];
+
+@clsFina400_500 = [miao_aa miao_eng miao_ia miao_ian miao_iang miao_io miao_ii miao_iu miao_ing miao_ua miao_uu miao_uei miao_ung];
+
+@clsFina500andAbove = [miao_uan miao_uang];
+
 @clsTonesAboveOrBelow = [miao_tone_above miao_tone_below];
 
 @clsPosMark = [miao_tone_right miao_tone_top_right @clsTonesAboveOrBelow];
 
 @clsPos = [miao_tone_right.blnk miao_tone_top_right.blnk miao_tone_above.blnk miao_tone_below.blnk];
 @clsPosRight = [miao_tone_right.blnk miao_tone_top_right.blnk];
-
-@clsPunctuation = [semicolon semicolon.full exclam exclam.full colon colon.full comma comma.full period period.full quotedblright];
