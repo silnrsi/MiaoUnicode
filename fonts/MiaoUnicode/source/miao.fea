@@ -217,22 +217,6 @@ lookup addRSB {
 
 } addRSB;
 
-
-feature kern {
-
-	pos miao_asp' <-150 0 0 0> @clsInit;
-
-	lookup shiftFinalToneRightPosition;
-	lookup shiftFinalYToneRightPosition;
-
-	lookup shiftFinalToneTopRightPosition;
-	lookup shiftFinalYToneTopRightPosition;
-
-	lookup kernBaselineFinals;
-	lookup addRSB;
-
-} kern;
-
 lookup attachAspMark {
 
 	pos @clsInit @clsFinaYcmp @clsPos @clsAspHi'lookup at_aspHiS_with_aspHiM;
@@ -277,6 +261,33 @@ feature mkmk {
 	pos @clsFinaYcmp'lookup at_NormL_with_NormR;
 
 } mkmk;
+
+lookup shift_miao_a {
+
+	pos @clsFina @clsFina miao_a' <0 160 0 0> [miao_tone_top_right.blnk];
+	pos @clsFina miao_a' <0 160 0 0> [miao_tone_top_right.blnk];
+
+	pos @clsFina @clsFina miao_a' <0 80 0 0> [miao_tone_right.blnk];
+	pos @clsFina miao_a' <0 80 0 0> [miao_tone_right.blnk];
+
+} shift_miao_a;
+
+feature kern {
+
+	pos miao_asp' <-150 0 0 0> @clsInit;
+
+	lookup shiftFinalToneRightPosition;
+	lookup shiftFinalYToneRightPosition;
+
+	lookup shiftFinalToneTopRightPosition;
+	lookup shiftFinalYToneTopRightPosition;
+
+	lookup kernBaselineFinals;
+	lookup addRSB;
+
+	lookup shift_miao_a;
+
+} kern;
 
 
 @GDEF_Simple = [space A B C D E F G H I J K 
