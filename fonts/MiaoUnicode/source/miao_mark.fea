@@ -40,6 +40,7 @@ lookup at_aboveNormS_with_NormM{
 	markClass [miao_ng.ycmp] <anchor 94 -1> @at_aboveNormS_with_NormM;
 	markClass [miao_ei.ycmp] <anchor 97 0> @at_aboveNormS_with_NormM;
 	markClass [miao_ei.ycmphmd] <anchor 77 0> @at_aboveNormS_with_NormM;
+	markClass [miao_iu.ycmp] <anchor 146 -30> @at_aboveNormS_with_NormM;
 	pos base [miao_pa] <anchor 255 746> mark @at_aboveNormS_with_NormM;
 	pos base [miao_ba] <anchor 255 746> mark @at_aboveNormS_with_NormM;
 	pos base [miao_yi_pa] <anchor 302 746> mark @at_aboveNormS_with_NormM;
