@@ -1,7 +1,7 @@
-include(miao_classes.fea)
-include(miao_aspr.fea)
-include(miao_mark.fea)
-include(miao_mkmk.fea)
+include(../source/miao_classes.fea)
+include(../source/miao_aspr.fea)
+include(../source/miao_mark.fea)
+include(../source/miao_mkmk.fea)
 
 
 # GSUB
