@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_tone_mya_ti" format="1">
+  <advance width="249"/>
+  <unicode hex="A4F8"/>
+  <outline>
+    <component base="period"/>
+  </outline>
+</glyph>

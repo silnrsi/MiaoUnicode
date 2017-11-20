@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="parenright.dnom" format="1">
+  <advance width="237"/>
+  <outline>
+    <contour>
+      <point x="39" y="-57" type="line"/>
+      <point x="64.3333" y="-17"/>
+      <point x="82.5" y="23.8333"/>
+      <point x="93.5" y="65.5" type="curve" smooth="yes"/>
+      <point x="104.5" y="107.167"/>
+      <point x="110" y="150.333"/>
+      <point x="110" y="195" type="curve" smooth="yes"/>
+      <point x="110" y="239"/>
+      <point x="104.5" y="281.833"/>
+      <point x="93.5" y="323.5" type="curve" smooth="yes"/>
+      <point x="82.5" y="365.167"/>
+      <point x="64.3333" y="405.667"/>
+      <point x="39" y="445" type="curve"/>
+      <point x="86" y="467" type="line"/>
+      <point x="113.333" y="426.333"/>
+      <point x="134.5" y="384.833"/>
+      <point x="149.5" y="342.5" type="curve" smooth="yes"/>
+      <point x="164.5" y="300.167"/>
+      <point x="172" y="251"/>
+      <point x="172" y="195" type="curve" smooth="yes"/>
+      <point x="172" y="138.333"/>
+      <point x="164.667" y="88.6667"/>
+      <point x="150" y="46" type="curve" smooth="yes"/>
+      <point x="135.333" y="3.33333"/>
+      <point x="114" y="-38.3333"/>
+      <point x="86" y="-79" type="curve"/>
+      <point x="39" y="-57" type="line"/>
+    </contour>
+  </outline>
+</glyph>

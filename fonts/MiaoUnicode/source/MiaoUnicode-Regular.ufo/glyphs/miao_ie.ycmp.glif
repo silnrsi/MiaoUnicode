@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_ie.ycmp" format="1">
+  <advance width="253"/>
+  <outline>
+    <contour>
+      <point x="216" y="-24" type="line"/>
+      <point x="33" y="-24" type="line"/>
+      <point x="33" y="19" type="line"/>
+      <point x="216" y="19" type="line"/>
+    </contour>
+    <contour>
+      <point x="216" y="106" type="line"/>
+      <point x="33" y="106" type="line"/>
+      <point x="33" y="149" type="line"/>
+      <point x="216" y="149" type="line"/>
+    </contour>
+  </outline>
+</glyph>

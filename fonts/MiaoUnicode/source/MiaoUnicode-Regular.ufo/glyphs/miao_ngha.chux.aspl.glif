@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_ngha.chux.aspl" format="1">
+  <advance width="861"/>
+  <outline>
+    <component base="miao_asp" xOffset="12"/>
+    <component base="miao_ngha.chux" xOffset="112"/>
+  </outline>
+</glyph>

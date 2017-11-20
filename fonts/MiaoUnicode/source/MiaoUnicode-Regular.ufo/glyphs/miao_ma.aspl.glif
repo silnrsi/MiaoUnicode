@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_ma.aspl" format="1">
+  <advance width="774"/>
+  <outline>
+    <component base="miao_asp" xOffset="12"/>
+    <component base="miao_ma" xOffset="172"/>
+  </outline>
+</glyph>

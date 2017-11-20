@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_ai" format="1">
+  <advance width="133"/>
+  <unicode hex="16F79"/>
+  <outline>
+    <contour>
+      <point x="93" y="0" type="line"/>
+      <point x="37" y="0" type="line"/>
+      <point x="37" y="232" type="line"/>
+      <point x="93" y="232" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_tone_mya_bo" format="1">
+  <advance width="434"/>
+  <unicode hex="A4FB"/>
+  <outline>
+    <component base="lisu_tone_na_po" xOffset="181"/>
+    <component base="lisu_tone_mya_ti"/>
+  </outline>
+</glyph>

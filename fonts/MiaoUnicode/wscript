@@ -24,7 +24,7 @@ for l in langmap.keys():
         	cmds.append(cmd('ttfremap -c ${SRC} -r ${DEP} ${TGT}', [sourcedir + l + 'map.cfg']))
 	font(
      target=process('fonts/' + fontname + '.ttf', *cmds),
-	source=sourcedir + APPNAME + '.sfd',
+	source=sourcedir + 'MiaoUnicode-Regular.ufo',
     graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
     script = 'plrd'
 )

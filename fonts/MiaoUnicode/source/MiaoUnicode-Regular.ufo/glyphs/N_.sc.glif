@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="N.sc" format="1">
+  <advance width="585"/>
+  <outline>
+    <contour>
+      <point x="299" y="-22" type="move" name="Anchor-2"/>
+    </contour>
+    <contour>
+      <point x="301" y="563" type="move" name="Anchor-0"/>
+    </contour>
+    <contour>
+      <point x="90" y="518" type="line"/>
+      <point x="174" y="518" type="line"/>
+      <point x="365" y="212" type="line"/>
+      <point x="425" y="101" type="line"/>
+      <point x="429" y="101" type="line"/>
+      <point x="427" y="127"/>
+      <point x="424.667" y="155.5"/>
+      <point x="422" y="186.5" type="curve" smooth="yes"/>
+      <point x="419.333" y="217.5"/>
+      <point x="418" y="247"/>
+      <point x="418" y="275" type="curve" smooth="yes"/>
+      <point x="418" y="518" type="line"/>
+      <point x="495" y="518" type="line"/>
+      <point x="495" y="0" type="line"/>
+      <point x="412" y="0" type="line"/>
+      <point x="220" y="306" type="line"/>
+      <point x="160" y="417" type="line"/>
+      <point x="156" y="417" type="line"/>
+      <point x="158" y="389.667"/>
+      <point x="160.333" y="361.167"/>
+      <point x="163" y="331.5" type="curve" smooth="yes"/>
+      <point x="165.667" y="301.833"/>
+      <point x="167" y="273"/>
+      <point x="167" y="245" type="curve" smooth="yes"/>
+      <point x="167" y="0" type="line"/>
+      <point x="90" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

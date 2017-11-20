@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_err.ycmp" format="1">
+  <advance width="249"/>
+  <outline>
+    <contour>
+      <point x="209" y="200" type="line"/>
+      <point x="209" y="0" type="line"/>
+      <point x="166" y="0" type="line"/>
+      <point x="166" y="157" type="line"/>
+      <point x="26" y="157" type="line"/>
+      <point x="26" y="200" type="line"/>
+    </contour>
+  </outline>
+</glyph>

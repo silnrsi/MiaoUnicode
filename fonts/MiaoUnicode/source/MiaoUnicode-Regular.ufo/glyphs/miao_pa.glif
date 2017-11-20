@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_pa" format="1">
+  <advance width="502"/>
+  <unicode hex="16F00"/>
+  <outline>
+    <contour>
+      <point x="427" y="656" type="line"/>
+      <point x="427" y="0" type="line"/>
+      <point x="57" y="0" type="line"/>
+      <point x="57" y="71" type="line"/>
+      <point x="344" y="71" type="line"/>
+      <point x="344" y="656" type="line"/>
+    </contour>
+  </outline>
+</glyph>

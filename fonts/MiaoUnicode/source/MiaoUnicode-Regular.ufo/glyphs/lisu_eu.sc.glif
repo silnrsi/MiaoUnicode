@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_eu.sc" format="1">
+  <advance width="475"/>
+  <outline>
+    <component base="E.sc" xScale="-1" yScale="-1" xOffset="475" yOffset="518"/>
+  </outline>
+</glyph>

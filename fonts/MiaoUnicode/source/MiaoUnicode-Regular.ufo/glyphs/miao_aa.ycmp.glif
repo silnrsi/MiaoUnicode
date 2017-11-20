@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_aa.ycmp" format="1">
+  <advance width="372"/>
+  <outline>
+    <contour>
+      <point x="184" y="114" type="line" smooth="yes"/>
+      <point x="184" y="63.3333"/>
+      <point x="202.167" y="38"/>
+      <point x="238.5" y="38" type="curve" smooth="yes"/>
+      <point x="274.833" y="38"/>
+      <point x="293" y="63.3333"/>
+      <point x="293" y="114" type="curve" smooth="yes"/>
+      <point x="293" y="200" type="line"/>
+      <point x="335" y="200" type="line"/>
+      <point x="335" y="115" type="line" smooth="yes"/>
+      <point x="335" y="55.6667"/>
+      <point x="315" y="19.3333"/>
+      <point x="275" y="6" type="curve" smooth="yes"/>
+      <point x="263" y="2"/>
+      <point x="250.333" y="0"/>
+      <point x="237" y="0" type="curve" smooth="yes"/>
+      <point x="223.667" y="0"/>
+      <point x="211" y="2"/>
+      <point x="199" y="6" type="curve" smooth="yes"/>
+      <point x="187" y="10"/>
+      <point x="176.667" y="16.6667"/>
+      <point x="168" y="26" type="curve" smooth="yes"/>
+      <point x="149.333" y="46"/>
+      <point x="140" y="75.6667"/>
+      <point x="140" y="115" type="curve" smooth="yes"/>
+      <point x="140" y="160" type="line"/>
+      <point x="26" y="160" type="line"/>
+      <point x="26" y="200" type="line"/>
+      <point x="184" y="200" type="line"/>
+    </contour>
+  </outline>
+</glyph>

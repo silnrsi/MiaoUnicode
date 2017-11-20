@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_ja" format="1">
+  <advance width="480"/>
+  <unicode hex="A4D9"/>
+  <outline>
+    <component base="J"/>
+  </outline>
+</glyph>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_yi_ta" format="1">
+  <advance width="589"/>
+  <unicode hex="16F0D"/>
+  <outline>
+    <contour>
+      <point x="168" y="0" type="line"/>
+      <point x="168" y="71" type="line"/>
+      <point x="254" y="71" type="line"/>
+      <point x="254" y="586" type="line"/>
+      <point x="56" y="586" type="line"/>
+      <point x="56" y="656" type="line"/>
+      <point x="536" y="656" type="line"/>
+      <point x="536" y="586" type="line"/>
+      <point x="338" y="586" type="line"/>
+      <point x="338" y="71" type="line"/>
+      <point x="424" y="71" type="line"/>
+      <point x="424" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

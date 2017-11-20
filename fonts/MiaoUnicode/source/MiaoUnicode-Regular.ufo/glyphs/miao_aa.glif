@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_aa" format="1">
+  <advance width="421"/>
+  <unicode hex="16F55"/>
+  <outline>
+    <contour>
+      <point x="272" y="-6" type="curve" smooth="yes"/>
+      <point x="238.667" y="-6"/>
+      <point x="211.5" y="4.66667"/>
+      <point x="190.5" y="26" type="curve" smooth="yes"/>
+      <point x="169.5" y="47.3333"/>
+      <point x="159" y="81"/>
+      <point x="159" y="127" type="curve" smooth="yes"/>
+      <point x="159" y="172" type="line"/>
+      <point x="27" y="172" type="line"/>
+      <point x="27" y="219" type="line"/>
+      <point x="210" y="219" type="line"/>
+      <point x="210" y="126" type="line"/>
+      <point x="210.667" y="67.3333"/>
+      <point x="231.667" y="38"/>
+      <point x="273" y="38" type="curve" smooth="yes"/>
+      <point x="314.333" y="38"/>
+      <point x="335" y="67.3333"/>
+      <point x="335" y="126" type="curve" smooth="yes"/>
+      <point x="335" y="219" type="line"/>
+      <point x="384" y="219" type="line"/>
+      <point x="384" y="127" type="line" smooth="yes"/>
+      <point x="384" y="81"/>
+      <point x="373.667" y="47.3333"/>
+      <point x="353" y="26" type="curve" smooth="yes"/>
+      <point x="332.333" y="4.66667"/>
+      <point x="305.333" y="-6"/>
+    </contour>
+  </outline>
+</glyph>

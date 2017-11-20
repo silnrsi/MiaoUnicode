@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1EDA" format="1">
+  <advance width="664"/>
+  <unicode hex="1EDA"/>
+  <outline>
+    <component base="Ohorn"/>
+    <component base="uni0301.cap" xOffset="332"/>
+  </outline>
+</glyph>

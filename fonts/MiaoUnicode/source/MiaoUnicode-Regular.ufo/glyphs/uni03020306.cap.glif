@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni03020306.cap" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="0" y="678" type="move" name="_Anchor-5"/>
+    </contour>
+    <contour>
+      <point x="0" y="678" type="move" name="_Anchor-0"/>
+    </contour>
+    <contour>
+      <point x="-36" y="812" type="line"/>
+      <point x="36" y="812" type="line"/>
+      <point x="128" y="706" type="line"/>
+      <point x="65" y="706" type="line"/>
+      <point x="2" y="768" type="line"/>
+      <point x="-2" y="768" type="line"/>
+      <point x="-65" y="706" type="line"/>
+      <point x="-128" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="0" y="841" type="curve" smooth="yes"/>
+      <point x="-38.6667" y="841"/>
+      <point x="-67.8333" y="850.5"/>
+      <point x="-87.5" y="869.5" type="curve" smooth="yes"/>
+      <point x="-107.167" y="888.5"/>
+      <point x="-118.667" y="911.333"/>
+      <point x="-122" y="938" type="curve"/>
+      <point x="-77" y="938" type="line"/>
+      <point x="-73" y="922.667"/>
+      <point x="-65.1667" y="910"/>
+      <point x="-53.5" y="900" type="curve" smooth="yes"/>
+      <point x="-41.8333" y="890"/>
+      <point x="-24" y="885"/>
+      <point x="0" y="885" type="curve" smooth="yes"/>
+      <point x="24" y="885"/>
+      <point x="41.8333" y="890"/>
+      <point x="53.5" y="900" type="curve" smooth="yes"/>
+      <point x="65.1667" y="910"/>
+      <point x="73" y="922.667"/>
+      <point x="77" y="938" type="curve"/>
+      <point x="122" y="938" type="line"/>
+      <point x="118.667" y="911.333"/>
+      <point x="107.167" y="888.5"/>
+      <point x="87.5" y="869.5" type="curve" smooth="yes"/>
+      <point x="67.8333" y="850.5"/>
+      <point x="38.6667" y="841"/>
+    </contour>
+  </outline>
+</glyph>

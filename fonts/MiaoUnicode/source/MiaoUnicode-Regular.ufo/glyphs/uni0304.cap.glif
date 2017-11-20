@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0304.cap" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="0" y="678" type="move" name="_Anchor-5"/>
+    </contour>
+    <contour>
+      <point x="0" y="678" type="move" name="_Anchor-0"/>
+    </contour>
+    <contour>
+      <point x="-124" y="786" type="line"/>
+      <point x="124" y="786" type="line"/>
+      <point x="124" y="729" type="line"/>
+      <point x="-124" y="729" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_ref_voice" format="1">
+  <advance width="175"/>
+  <unicode hex="16F52"/>
+  <outline>
+    <contour>
+      <point x="139" y="605" type="line"/>
+      <point x="113.667" y="588.333"/>
+      <point x="94.8333" y="570.667"/>
+      <point x="82.5" y="552" type="curve" smooth="yes"/>
+      <point x="70.1667" y="533.333"/>
+      <point x="64" y="509.333"/>
+      <point x="64" y="480" type="curve"/>
+      <point x="66" y="480.667"/>
+      <point x="68.6667" y="481"/>
+      <point x="72" y="481" type="curve" smooth="yes"/>
+      <point x="86" y="481"/>
+      <point x="98.3333" y="476.667"/>
+      <point x="109" y="468" type="curve" smooth="yes"/>
+      <point x="119.667" y="459.333"/>
+      <point x="125" y="447"/>
+      <point x="125" y="431" type="curve" smooth="yes"/>
+      <point x="125" y="413.667"/>
+      <point x="120" y="400"/>
+      <point x="110" y="390" type="curve" smooth="yes"/>
+      <point x="100" y="380"/>
+      <point x="87.3333" y="375"/>
+      <point x="72" y="375" type="curve" smooth="yes"/>
+      <point x="52.6667" y="375"/>
+      <point x="37.3333" y="382.833"/>
+      <point x="26" y="398.5" type="curve" smooth="yes"/>
+      <point x="14.6667" y="414.167"/>
+      <point x="9" y="436.667"/>
+      <point x="9" y="466" type="curve" smooth="yes"/>
+      <point x="9" y="506"/>
+      <point x="18.1667" y="540.5"/>
+      <point x="36.5" y="569.5" type="curve" smooth="yes"/>
+      <point x="54.8333" y="598.5"/>
+      <point x="81.3333" y="623"/>
+      <point x="116" y="643" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_ya" format="1">
+  <advance width="476"/>
+  <unicode hex="A4EC"/>
+  <outline>
+    <component base="Y"/>
+  </outline>
+</glyph>

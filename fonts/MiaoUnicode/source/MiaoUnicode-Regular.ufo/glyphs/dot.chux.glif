@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dot.chux" format="1">
+  <advance width="106"/>
+  <outline>
+    <contour>
+      <point x="53" y="662" type="curve" smooth="yes"/>
+      <point x="68.3333" y="662"/>
+      <point x="81" y="657"/>
+      <point x="91" y="647" type="curve" smooth="yes"/>
+      <point x="101" y="637"/>
+      <point x="106" y="623.667"/>
+      <point x="106" y="607" type="curve" smooth="yes"/>
+      <point x="106" y="590.333"/>
+      <point x="100.667" y="577.667"/>
+      <point x="90" y="569" type="curve" smooth="yes"/>
+      <point x="79.3333" y="560.333"/>
+      <point x="67" y="556"/>
+      <point x="53" y="556" type="curve" smooth="yes"/>
+      <point x="39" y="556"/>
+      <point x="26.6667" y="560.333"/>
+      <point x="16" y="569" type="curve" smooth="yes"/>
+      <point x="5.33333" y="577.667"/>
+      <point x="0" y="590.333"/>
+      <point x="0" y="607" type="curve" smooth="yes"/>
+      <point x="0" y="623.667"/>
+      <point x="5" y="637"/>
+      <point x="15" y="647" type="curve" smooth="yes"/>
+      <point x="25" y="657"/>
+      <point x="37.6667" y="662"/>
+    </contour>
+  </outline>
+</glyph>

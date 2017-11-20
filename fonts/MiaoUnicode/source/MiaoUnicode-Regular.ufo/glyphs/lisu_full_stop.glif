@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lisu_full_stop" format="1">
+  <advance width="311"/>
+  <unicode hex="A4FF"/>
+  <outline>
+    <component base="hyphen" yOffset="-140"/>
+    <component base="hyphen"/>
+  </outline>
+</glyph>

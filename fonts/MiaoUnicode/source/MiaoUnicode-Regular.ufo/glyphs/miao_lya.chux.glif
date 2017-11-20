@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_lya.chux" format="1">
+  <advance width="520"/>
+  <outline>
+    <component base="dot.chux" xOffset="379"/>
+    <component base="miao_la"/>
+  </outline>
+</glyph>

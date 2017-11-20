@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_round_err.ycmp" format="1">
+  <advance width="260"/>
+  <outline>
+    <contour>
+      <point x="182" y="86" type="line" smooth="yes"/>
+      <point x="182" y="136.667"/>
+      <point x="163.833" y="162"/>
+      <point x="127.5" y="162" type="curve" smooth="yes"/>
+      <point x="91.1667" y="162"/>
+      <point x="73" y="136.667"/>
+      <point x="73" y="86" type="curve" smooth="yes"/>
+      <point x="73" y="83" type="line"/>
+      <point x="29" y="83" type="line"/>
+      <point x="29" y="85" type="line" smooth="yes"/>
+      <point x="29" y="124.333"/>
+      <point x="37.6667" y="153.333"/>
+      <point x="55" y="172" type="curve" smooth="yes"/>
+      <point x="72.3333" y="190.667"/>
+      <point x="96" y="200"/>
+      <point x="126" y="200" type="curve" smooth="yes"/>
+      <point x="171.333" y="200"/>
+      <point x="201.333" y="179.333"/>
+      <point x="216" y="138" type="curve" smooth="yes"/>
+      <point x="221.333" y="123.333"/>
+      <point x="224" y="105.667"/>
+      <point x="224" y="85" type="curve" smooth="yes"/>
+      <point x="224" y="0" type="line"/>
+      <point x="182" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>
