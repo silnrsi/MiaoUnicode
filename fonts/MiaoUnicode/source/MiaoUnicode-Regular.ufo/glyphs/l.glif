@@ -4,12 +4,6 @@
   <unicode hex="006C"/>
   <outline>
     <contour>
-      <point x="122" y="-22" type="move" name="Anchor-2"/>
-    </contour>
-    <contour>
-      <point x="122" y="730" type="move" name="Anchor-0"/>
-    </contour>
-    <contour>
       <point x="82" y="712" type="line"/>
       <point x="164" y="712" type="line"/>
       <point x="164" y="92" type="line" smooth="yes"/>
@@ -38,6 +32,12 @@
       <point x="88.6667" y="34.6667"/>
       <point x="82" y="62"/>
       <point x="82" y="98" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="122" y="730" type="move" name="Anchor-0"/>
+    </contour>
+    <contour>
+      <point x="122" y="-22" type="move" name="Anchor-2"/>
     </contour>
   </outline>
 </glyph>

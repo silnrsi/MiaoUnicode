@@ -4,19 +4,19 @@
   <unicode hex="0131"/>
   <outline>
     <contour>
-      <point x="152" y="0" type="move" name="Anchor-4"/>
-    </contour>
-    <contour>
-      <point x="123" y="-22" type="move" name="Anchor-2"/>
+      <point x="82" y="486" type="line"/>
+      <point x="164" y="486" type="line"/>
+      <point x="164" y="0" type="line"/>
+      <point x="82" y="0" type="line"/>
     </contour>
     <contour>
       <point x="124" y="508" type="move" name="Anchor-0"/>
     </contour>
     <contour>
-      <point x="82" y="486" type="line"/>
-      <point x="164" y="486" type="line"/>
-      <point x="164" y="0" type="line"/>
-      <point x="82" y="0" type="line"/>
+      <point x="123" y="-22" type="move" name="Anchor-2"/>
+    </contour>
+    <contour>
+      <point x="152" y="0" type="move" name="Anchor-4"/>
     </contour>
   </outline>
 </glyph>

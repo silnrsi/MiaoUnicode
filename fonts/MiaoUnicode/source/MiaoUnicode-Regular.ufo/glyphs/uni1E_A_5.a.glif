@@ -2,13 +2,13 @@
 <glyph name="uni1EA5.a" format="1">
   <advance width="555"/>
   <outline>
-    <contour>
-      <point x="268" y="-22" type="move" name="Anchor-2"/>
-    </contour>
+    <component base="uni0251"/>
+    <component base="uni03020301" xOffset="282"/>
     <contour>
       <point x="268" y="500" type="move" name="Anchor-0"/>
     </contour>
-    <component base="uni0251"/>
-    <component base="uni03020301" xOffset="282"/>
+    <contour>
+      <point x="268" y="-22" type="move" name="Anchor-2"/>
+    </contour>
   </outline>
 </glyph>

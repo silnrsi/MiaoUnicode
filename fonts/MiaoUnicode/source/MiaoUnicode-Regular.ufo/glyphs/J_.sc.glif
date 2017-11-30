@@ -3,12 +3,6 @@
   <advance width="438"/>
   <outline>
     <contour>
-      <point x="209" y="-22" type="move" name="Anchor-2"/>
-    </contour>
-    <contour>
-      <point x="303" y="563" type="move" name="Anchor-0"/>
-    </contour>
-    <contour>
       <point x="89" y="117" type="line"/>
       <point x="113" y="78.3333"/>
       <point x="144" y="59"/>
@@ -37,6 +31,12 @@
       <point x="118.667" y="-12"/>
       <point x="65.6667" y="17.3333"/>
       <point x="31" y="76" type="curve"/>
+    </contour>
+    <contour>
+      <point x="303" y="563" type="move" name="Anchor-0"/>
+    </contour>
+    <contour>
+      <point x="209" y="-22" type="move" name="Anchor-2"/>
     </contour>
   </outline>
 </glyph>

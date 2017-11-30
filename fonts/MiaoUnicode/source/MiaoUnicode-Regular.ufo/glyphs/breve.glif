@@ -3,9 +3,9 @@
   <advance width="542"/>
   <unicode hex="02D8"/>
   <outline>
+    <component base="uni0306" xOffset="271"/>
     <contour>
       <point x="271" y="706" type="move" name="Anchor-0"/>
     </contour>
-    <component base="uni0306" xOffset="271"/>
   </outline>
 </glyph>

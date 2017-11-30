@@ -3,16 +3,16 @@
   <advance width="0"/>
   <outline>
     <contour>
-      <point x="0" y="678" type="move" name="_Anchor-5"/>
+      <point x="-131" y="818" type="line"/>
+      <point x="-37" y="818" type="line"/>
+      <point x="51" y="706" type="line"/>
+      <point x="-18" y="706" type="line"/>
     </contour>
     <contour>
       <point x="0" y="678" type="move" name="_Anchor-0"/>
     </contour>
     <contour>
-      <point x="-131" y="818" type="line"/>
-      <point x="-37" y="818" type="line"/>
-      <point x="51" y="706" type="line"/>
-      <point x="-18" y="706" type="line"/>
+      <point x="0" y="678" type="move" name="_Anchor-5"/>
     </contour>
   </outline>
 </glyph>
