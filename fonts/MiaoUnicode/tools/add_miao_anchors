@@ -13,8 +13,6 @@ argspec = [
     ('ofont',{'help': 'Output UFO','nargs': '?' }, {'type': 'outfont'}),
     ('-l','--log',{'help': 'Log file'}, {'type': 'outfile', 'def': '_anc.log'}),
     ('-a','--analysis',{'help': 'Analysis only; no output font generated', 'action': 'store_true'},{}),
-    # 'choices' for -r should correspond to infont.logger.loglevels.keys()
-    ('-r','--report',{'help': 'Set reporting level for log', 'type':str, 'choices':['X','S','E','P','W','I','V']},{}),
     ('--vspace',{'help': 'Vertical gap between consonant and vowel', 'type':int, 'default':20},{}),
     ('--outhang',{'help': 'Overhang long above/below vowels', 'type':int, 'default':50},{})
     ]
@@ -30,10 +28,10 @@ def getuni(g):
 def getbbox(g):
     res = (65536, 65536, -65536, -65536)
     for c in g['outline'].contours:
-        for p in c['points']:
+        for p in c['point']:
             if 'type' in p.attrib:      # any actual point counts
-                x = int(p.get('x', '0'))
-                y = int(p.get('y', '0'))
+                x = float(p.get('x', '0'))
+                y = float(p.get('y', '0'))
                 res = (min(x, res[0]), min(y, res[1]), max(x, res[2]), max(y, res[3]))
     return BBox(*res)
 
@@ -44,25 +42,37 @@ def glyph_addanchors(g, anchors):
 def glyph_removeanchors(g):
     del g._contents['anchor']
 
+def glyph_makecopyref(g, name):
+    ng = Uglif(layer=g.layer, name=name)
+    ng.add('advance', g['advance'].element.attrib)
+    ng.add('outline')
+    ng['outline'].appendobject({"base": g.name},'component')
+    if name in g.layer:
+        logger.log(name + " already in font, so not added", "E")
+    else:
+        g.layer.addGlyph(ng)
+    return ng
+
 def doit(args) :
     infont = args.ifont
-    if args.report: infont.logger.loglevel = args.report
+    logger = infont.logger
     glyphcount = 0
 
-#    newglyphs = {}
-    for gname, glyph in infont.deflayer.items():
+    vowelglyph = infont.deflayer['miao_i']
+    vgbbox = getbbox(vowelglyph)
+    newglyphs = []
+    for gname in infont.deflayer.keys():
+        glyph = infont.deflayer[gname]
         u = getuni(glyph)
         if u in range(0x16F00, 0x16F45):
-            add_consonantanchors(glyph, args)
+            add_consonantanchors(glyph, vgbbox.ymax, args)
         elif u in range(0x16F54, 0x16F7C):
-            ng = add_vowelanchors(glyph, args, infont)
-#            newglyphs[ng.name] = ng
-#    infont.deflayer.update(newglyphs)
+            newglyphs.append(add_vowelanchors(glyph, args))
     if args.analysis:
         return
     return infont
 
-def add_consonantanchors(g, args):
+def add_consonantanchors(g, vheight, args):
     bb = getbbox(g)
     adv = int(g['advance'].width)
     glyph_removeanchors(g)
@@ -74,21 +84,16 @@ def add_consonantanchors(g, args):
         'H': ((bb.xmin + bb.xmax) / 2, bb.ymax + args.vspace),
         'F3': (-args.outhang, bb.ymin - args.vspace),
         'F': ((bb.xmin + bb.xmax) / 2, bb.ymin - args.vspace),
-        'WH' : (adv, bb.ymax * 2 / 3),
-        'WL' : (adv, bb.ymax / 3)
+        'WH' : (adv, (bb.ymax - vheight) / 2),
+        'WL' : (adv, (bb.ymax + vheight) / 2)
+#        'WH' : (adv, bb.ymax * 2 / 3 - vheight / 6),
+#        'WL' : (adv, bb.ymax / 3 + vheight / 6)
     }
     glyph_addanchors(g, anchors)
 
-def add_vowelanchors(g, args, infont):
+def add_vowelanchors(g, args):
     glyph_removeanchors(g)
-    ng = Uglif(layer=infont.deflayer, name=g.name+".mark")
-    ng['advance'] = Uadvance(ng, g['advance'].element)  # what about g.advance.glif?
-    #ng['outline'] = Uoutline(ng, [])
-    ng.add('outline')
-    ng['outline'].components.append(Ucomponent(ng['outline'], []))
-    ng['outline'].components[0].base = g.name
-    infont.deflayer.addGlyph(ng)
-
+    ng = glyph_makecopyref(g, g.name+".mark")
     bb = getbbox(g)
     adv = int(g['advance'].width)
 
