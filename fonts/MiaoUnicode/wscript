@@ -25,6 +25,7 @@ for l in langmap.keys():
 	font(
      target=process('fonts/' + fontname + '.ttf', *cmds),
 	source=sourcedir + 'MiaoUnicode-Regular.ufo',
+    opentype=fea(fontname + '.fea', master='source/opentype/miao_main.feax'),
     graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
     script = 'plrd'
 )

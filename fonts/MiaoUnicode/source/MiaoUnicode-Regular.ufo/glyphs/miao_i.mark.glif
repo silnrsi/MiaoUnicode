@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_i.mark" format="1">
+  <advance width="293"/>
+  <outline>
+    <component base="miao_i"/>
+    <contour>
+      <point x="0" y="225" type="move" name="_FL"/>
+    </contour>
+    <contour>
+      <point x="146.5" y="225" type="move" name="_FM"/>
+    </contour>
+    <contour>
+      <point x="293" y="225" type="move" name="_FR"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_HL"/>
+    </contour>
+    <contour>
+      <point x="146.5" y="0" type="move" name="_HM"/>
+    </contour>
+    <contour>
+      <point x="293" y="0" type="move" name="_HR"/>
+    </contour>
+  </outline>
+</glyph>

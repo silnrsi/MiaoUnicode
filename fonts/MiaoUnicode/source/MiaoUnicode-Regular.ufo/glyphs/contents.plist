@@ -1140,36 +1140,52 @@
   <string>macron.glif</string>
   <key>miao_a</key>
   <string>miao_a.glif</string>
+  <key>miao_a.mark</key>
+  <string>miao_a.mark.glif</string>
   <key>miao_a.ycmp</key>
   <string>miao_a.ycmp.glif</string>
   <key>miao_aa</key>
   <string>miao_aa.glif</string>
+  <key>miao_aa.mark</key>
+  <string>miao_aa.mark.glif</string>
   <key>miao_aa.ycmp</key>
   <string>miao_aa.ycmp.glif</string>
   <key>miao_ae</key>
   <string>miao_ae.glif</string>
+  <key>miao_ae.mark</key>
+  <string>miao_ae.mark.glif</string>
   <key>miao_ae.ycmp</key>
   <string>miao_ae.ycmp.glif</string>
   <key>miao_aee</key>
   <string>miao_aee.glif</string>
+  <key>miao_aee.mark</key>
+  <string>miao_aee.mark.glif</string>
   <key>miao_aee.ycmp</key>
   <string>miao_aee.ycmp.glif</string>
   <key>miao_ah</key>
   <string>miao_ah.glif</string>
   <key>miao_ahh</key>
   <string>miao_ahh.glif</string>
+  <key>miao_ahh.mark</key>
+  <string>miao_ahh.mark.glif</string>
   <key>miao_ahh.ycmp</key>
   <string>miao_ahh.ycmp.glif</string>
   <key>miao_ai</key>
   <string>miao_ai.glif</string>
+  <key>miao_ai.mark</key>
+  <string>miao_ai.mark.glif</string>
   <key>miao_ai.ycmp</key>
   <string>miao_ai.ycmp.glif</string>
   <key>miao_an</key>
   <string>miao_an.glif</string>
+  <key>miao_an.mark</key>
+  <string>miao_an.mark.glif</string>
   <key>miao_an.ycmp</key>
   <string>miao_an.ycmp.glif</string>
   <key>miao_ang</key>
   <string>miao_ang.glif</string>
+  <key>miao_ang.mark</key>
+  <string>miao_ang.mark.glif</string>
   <key>miao_ang.ycmp</key>
   <string>miao_ang.ycmp.glif</string>
   <key>miao_arch_ma</key>
@@ -1190,6 +1206,8 @@
   <string>miao_asp.glif</string>
   <key>miao_au</key>
   <string>miao_au.glif</string>
+  <key>miao_au.mark</key>
+  <string>miao_au.mark.glif</string>
   <key>miao_au.ycmp</key>
   <string>miao_au.ycmp.glif</string>
   <key>miao_ba</key>
@@ -1226,30 +1244,42 @@
   <string>miao_dzza.chux.glif</string>
   <key>miao_e</key>
   <string>miao_e.glif</string>
+  <key>miao_e.mark</key>
+  <string>miao_e.mark.glif</string>
   <key>miao_e.ycmp</key>
   <string>miao_e.ycmp.glif</string>
   <key>miao_ei</key>
   <string>miao_ei.glif</string>
   <key>miao_ei.hmd</key>
   <string>miao_ei.hmd.glif</string>
+  <key>miao_ei.mark</key>
+  <string>miao_ei.mark.glif</string>
   <key>miao_ei.ycmp</key>
   <string>miao_ei.ycmp.glif</string>
   <key>miao_ei.ycmphmd</key>
   <string>miao_ei.ycmphmd.glif</string>
   <key>miao_en</key>
   <string>miao_en.glif</string>
+  <key>miao_en.mark</key>
+  <string>miao_en.mark.glif</string>
   <key>miao_en.ycmp</key>
   <string>miao_en.ycmp.glif</string>
   <key>miao_eng</key>
   <string>miao_eng.glif</string>
+  <key>miao_eng.mark</key>
+  <string>miao_eng.mark.glif</string>
   <key>miao_eng.ycmp</key>
   <string>miao_eng.ycmp.glif</string>
   <key>miao_er</key>
   <string>miao_er.glif</string>
+  <key>miao_er.mark</key>
+  <string>miao_er.mark.glif</string>
   <key>miao_er.ycmp</key>
   <string>miao_er.ycmp.glif</string>
   <key>miao_err</key>
   <string>miao_err.glif</string>
+  <key>miao_err.mark</key>
+  <string>miao_err.mark.glif</string>
   <key>miao_err.ycmp</key>
   <string>miao_err.ycmp.glif</string>
   <key>miao_fa</key>
@@ -1272,38 +1302,56 @@
   <string>miao_hha.chux.glif</string>
   <key>miao_i</key>
   <string>miao_i.glif</string>
+  <key>miao_i.mark</key>
+  <string>miao_i.mark.glif</string>
   <key>miao_i.ycmp</key>
   <string>miao_i.ycmp.glif</string>
   <key>miao_ia</key>
   <string>miao_ia.glif</string>
+  <key>miao_ia.mark</key>
+  <string>miao_ia.mark.glif</string>
   <key>miao_ia.ycmp</key>
   <string>miao_ia.ycmp.glif</string>
   <key>miao_ian</key>
   <string>miao_ian.glif</string>
+  <key>miao_ian.mark</key>
+  <string>miao_ian.mark.glif</string>
   <key>miao_ian.ycmp</key>
   <string>miao_ian.ycmp.glif</string>
   <key>miao_iang</key>
   <string>miao_iang.glif</string>
+  <key>miao_iang.mark</key>
+  <string>miao_iang.mark.glif</string>
   <key>miao_iang.ycmp</key>
   <string>miao_iang.ycmp.glif</string>
   <key>miao_ie</key>
   <string>miao_ie.glif</string>
+  <key>miao_ie.mark</key>
+  <string>miao_ie.mark.glif</string>
   <key>miao_ie.ycmp</key>
   <string>miao_ie.ycmp.glif</string>
   <key>miao_ii</key>
   <string>miao_ii.glif</string>
+  <key>miao_ii.mark</key>
+  <string>miao_ii.mark.glif</string>
   <key>miao_ii.ycmp</key>
   <string>miao_ii.ycmp.glif</string>
   <key>miao_ing</key>
   <string>miao_ing.glif</string>
+  <key>miao_ing.mark</key>
+  <string>miao_ing.mark.glif</string>
   <key>miao_ing.ycmp</key>
   <string>miao_ing.ycmp.glif</string>
   <key>miao_io</key>
   <string>miao_io.glif</string>
+  <key>miao_io.mark</key>
+  <string>miao_io.mark.glif</string>
   <key>miao_io.ycmp</key>
   <string>miao_io.ycmp.glif</string>
   <key>miao_iu</key>
   <string>miao_iu.glif</string>
+  <key>miao_iu.mark</key>
+  <string>miao_iu.mark.glif</string>
   <key>miao_iu.ycmp</key>
   <string>miao_iu.ycmp.glif</string>
   <key>miao_ka</key>
@@ -1392,14 +1440,20 @@
   <string>miao_nyha.chux.glif</string>
   <key>miao_o</key>
   <string>miao_o.glif</string>
+  <key>miao_o.mark</key>
+  <string>miao_o.mark.glif</string>
   <key>miao_o.ycmp</key>
   <string>miao_o.ycmp.glif</string>
   <key>miao_oey</key>
   <string>miao_oey.glif</string>
+  <key>miao_oey.mark</key>
+  <string>miao_oey.mark.glif</string>
   <key>miao_oey.ycmp</key>
   <string>miao_oey.ycmp.glif</string>
   <key>miao_oo</key>
   <string>miao_oo.glif</string>
+  <key>miao_oo.mark</key>
+  <string>miao_oo.mark.glif</string>
   <key>miao_oo.ycmp</key>
   <string>miao_oo.ycmp.glif</string>
   <key>miao_ou</key>
@@ -1436,10 +1490,14 @@
   <string>miao_ref_voice.glif</string>
   <key>miao_round_er</key>
   <string>miao_round_er.glif</string>
+  <key>miao_round_er.mark</key>
+  <string>miao_round_er.mark.glif</string>
   <key>miao_round_er.ycmp</key>
   <string>miao_round_er.ycmp.glif</string>
   <key>miao_round_err</key>
   <string>miao_round_err.glif</string>
+  <key>miao_round_err.mark</key>
+  <string>miao_round_err.mark.glif</string>
   <key>miao_round_err.ycmp</key>
   <string>miao_round_err.ycmp.glif</string>
   <key>miao_sa</key>
@@ -1500,30 +1558,44 @@
   <string>miao_tta.glif</string>
   <key>miao_u</key>
   <string>miao_u.glif</string>
+  <key>miao_u.mark</key>
+  <string>miao_u.mark.glif</string>
   <key>miao_u.ycmp</key>
   <string>miao_u.ycmp.glif</string>
   <key>miao_ua</key>
   <string>miao_ua.glif</string>
+  <key>miao_ua.mark</key>
+  <string>miao_ua.mark.glif</string>
   <key>miao_ua.ycmp</key>
   <string>miao_ua.ycmp.glif</string>
   <key>miao_uan</key>
   <string>miao_uan.glif</string>
+  <key>miao_uan.mark</key>
+  <string>miao_uan.mark.glif</string>
   <key>miao_uan.ycmp</key>
   <string>miao_uan.ycmp.glif</string>
   <key>miao_uang</key>
   <string>miao_uang.glif</string>
+  <key>miao_uang.mark</key>
+  <string>miao_uang.mark.glif</string>
   <key>miao_uang.ycmp</key>
   <string>miao_uang.ycmp.glif</string>
   <key>miao_uei</key>
   <string>miao_uei.glif</string>
+  <key>miao_uei.mark</key>
+  <string>miao_uei.mark.glif</string>
   <key>miao_uei.ycmp</key>
   <string>miao_uei.ycmp.glif</string>
   <key>miao_ung</key>
   <string>miao_ung.glif</string>
+  <key>miao_ung.mark</key>
+  <string>miao_ung.mark.glif</string>
   <key>miao_ung.ycmp</key>
   <string>miao_ung.ycmp.glif</string>
   <key>miao_uu</key>
   <string>miao_uu.glif</string>
+  <key>miao_uu.mark</key>
+  <string>miao_uu.mark.glif</string>
   <key>miao_uu.ycmp</key>
   <string>miao_uu.ycmp.glif</string>
   <key>miao_va</key>
@@ -1534,22 +1606,30 @@
   <string>miao_vfa.chux.glif</string>
   <key>miao_w</key>
   <string>miao_w.glif</string>
+  <key>miao_w.mark</key>
+  <string>miao_w.mark.glif</string>
   <key>miao_w.ycmp</key>
   <string>miao_w.ycmp.glif</string>
   <key>miao_wa</key>
   <string>miao_wa.glif</string>
   <key>miao_wo</key>
   <string>miao_wo.glif</string>
+  <key>miao_wo.mark</key>
+  <string>miao_wo.mark.glif</string>
   <key>miao_wo.ycmp</key>
   <string>miao_wo.ycmp.glif</string>
   <key>miao_xa</key>
   <string>miao_xa.glif</string>
   <key>miao_y</key>
   <string>miao_y.glif</string>
+  <key>miao_y.mark</key>
+  <string>miao_y.mark.glif</string>
   <key>miao_y.ycmp</key>
   <string>miao_y.ycmp.glif</string>
   <key>miao_yi</key>
   <string>miao_yi.glif</string>
+  <key>miao_yi.mark</key>
+  <string>miao_yi.mark.glif</string>
   <key>miao_yi.ycmp</key>
   <string>miao_yi.ycmp.glif</string>
   <key>miao_yi_dzha</key>

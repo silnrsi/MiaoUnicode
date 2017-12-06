@@ -53,5 +53,23 @@
       <point x="207" y="169" type="line"/>
       <point x="207" y="125" type="line"/>
     </contour>
+    <contour>
+      <point x="266" y="294" type="move" name="S"/>
+    </contour>
+    <contour>
+      <point x="266" y="0" type="move" name="V"/>
+    </contour>
+    <contour>
+      <point x="266" y="147" type="move" name="W"/>
+    </contour>
+    <contour>
+      <point x="0" y="294" type="move" name="_S"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_V"/>
+    </contour>
+    <contour>
+      <point x="0" y="147" type="move" name="_W"/>
+    </contour>
   </outline>
 </glyph>

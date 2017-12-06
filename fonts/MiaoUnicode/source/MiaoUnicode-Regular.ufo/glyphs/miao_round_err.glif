@@ -32,5 +32,23 @@
       <point x="159.667" y="179.333"/>
       <point x="151.333" y="181"/>
     </contour>
+    <contour>
+      <point x="289" y="225" type="move" name="S"/>
+    </contour>
+    <contour>
+      <point x="289" y="0" type="move" name="V"/>
+    </contour>
+    <contour>
+      <point x="289" y="112.5" type="move" name="W"/>
+    </contour>
+    <contour>
+      <point x="0" y="225" type="move" name="_S"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_V"/>
+    </contour>
+    <contour>
+      <point x="0" y="112.5" type="move" name="_W"/>
+    </contour>
   </outline>
 </glyph>

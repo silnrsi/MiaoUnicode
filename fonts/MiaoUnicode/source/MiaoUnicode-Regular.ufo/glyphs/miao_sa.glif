@@ -117,5 +117,32 @@
       <point x="71.6667" y="55"/>
       <point x="43" y="85" type="curve"/>
     </contour>
+    <contour>
+      <point x="269.5" y="-32" type="move" name="F"/>
+    </contour>
+    <contour>
+      <point x="-50" y="-32" type="move" name="F3"/>
+    </contour>
+    <contour>
+      <point x="269.5" y="688" type="move" name="H"/>
+    </contour>
+    <contour>
+      <point x="-50" y="688" type="move" name="H3"/>
+    </contour>
+    <contour>
+      <point x="539" y="668" type="move" name="S"/>
+    </contour>
+    <contour>
+      <point x="539" y="0" type="move" name="V"/>
+    </contour>
+    <contour>
+      <point x="539" y="334" type="move" name="W"/>
+    </contour>
+    <contour>
+      <point x="539" y="221.5" type="move" name="WH"/>
+    </contour>
+    <contour>
+      <point x="539" y="446.5" type="move" name="WL"/>
+    </contour>
   </outline>
 </glyph>

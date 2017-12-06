@@ -59,5 +59,32 @@
       <point x="62" y="189.833"/>
       <point x="54" y="227.667"/>
     </contour>
+    <contour>
+      <point x="382" y="-32" type="move" name="F"/>
+    </contour>
+    <contour>
+      <point x="-50" y="-32" type="move" name="F3"/>
+    </contour>
+    <contour>
+      <point x="382" y="487" type="move" name="H"/>
+    </contour>
+    <contour>
+      <point x="-50" y="487" type="move" name="H3"/>
+    </contour>
+    <contour>
+      <point x="768" y="467" type="move" name="S"/>
+    </contour>
+    <contour>
+      <point x="768" y="0" type="move" name="V"/>
+    </contour>
+    <contour>
+      <point x="768" y="233.5" type="move" name="W"/>
+    </contour>
+    <contour>
+      <point x="768" y="121" type="move" name="WH"/>
+    </contour>
+    <contour>
+      <point x="768" y="346" type="move" name="WL"/>
+    </contour>
   </outline>
 </glyph>

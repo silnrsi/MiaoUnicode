@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<classes>
+
+    <class name="vowel" exts=".ycmp">
+        miao_round_er miao_i miao_ian miao_iang miao_round_err miao_ia miao_ing miao_ei
+        miao_er miao_oo miao_ahh miao_ung miao_ang miao_uan miao_u miao_an miao_aa
+        miao_ie miao_uei miao_uu miao_ua miao_err miao_uang miao_wo miao_a miao_en
+        miao_eng miao_yi miao_aee miao_w miao_ ae miao_oey miao_ii miao_iu miao_ai
+        miao_y miao_au miao_e miao_o miao_io
+    </class>
+
+</classes>

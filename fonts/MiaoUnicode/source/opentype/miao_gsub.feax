@@ -1,0 +1,61 @@
+lookup pre_tone_del {
+    sub @vowel tone_foot by @vowel_mark;
+    sub @vowel tone_waist by @vowel;
+    sub @vowel tone_shoulder by @vowel;
+    sub @vowel tone_head by @vowel_mark;
+} pre_tone_del;
+
+lookup vowel_mark {
+    sub @vowel by @vowel_mark;
+} vowel_mark;
+
+lookup pre_tone_foot_short {
+    sub @vowel by tone_foot @vowel;
+} pre_tone_foot_short
+
+lookup pre_tone_waist_short {
+    sub @vowel by tone_waist @vowel;
+} pre_tone_waist_short;
+
+lookup pre_tone_shoulder_short {
+    sub @vowel by tone_shoulder @vowel;
+} pre_tone_shoulder_short;
+
+lookup pre_tone_head_short {
+    sub @vowel by tone_head @vowel;
+} pre_tone_head_short;
+
+lookup pre_tone_foot {
+    sub @vowel by tone_foot @vowel tone_foot;
+} pre_tone_foot;
+
+lookup pre_tone_waist {
+    sub @vowel by tone_waist @vowel tone_waist;
+} pre_tone_waist;
+
+lookup pre_tone_shoulder {
+    sub @vowel by tone_shoulder @vowel tone_shoulder;
+} pre_tone_shoulder;
+
+lookup pre_tone_head {
+    sub @vowel by tone_head @vowel tone_head;
+} pre_tone_head;
+
+lookup reorder_tones {
+    # VVVT, V->TVT, VT->V
+    sub @vowel' lookup pre_tone_foot @vowel' lookup pre_tone_del @vowel' lookup vowel_mark tone_foot' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_waist @vowel' lookup pre_tone_del @vowel' tone_waist' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_shoulder @vowel' lookup pre_tone_del @vowel' tone_shoulder' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_head @vowel' lookup pre_tone_del @vowel' lookup vowel_mark tone_head' lookup pre_tone_del;
+    # VVT, V->TVT, VT->V
+    sub @vowel' lookup pre_tone_foot @vowel' lookup pre_tone_del tone_foot' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_waist @vowel' lookup pre_tone_del tone_waist' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_shoulder @vowel' lookup pre_tone_del tone_shoulder' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_head @vowel' lookup pre_tone_del tone_head' lookup pre_tone_del;
+    # VT
+    sub @vowel' lookup pre_tone_foot_short tone_foot' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_waist_short tone_waist' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_shoulder_short tone_shoulder' lookup pre_tone_del;
+    sub @vowel' lookup pre_tone_head_short tone_head' lookup pre_tone_del;
+} reorder_tones;
+

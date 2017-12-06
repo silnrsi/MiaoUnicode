@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="miao_uang.mark" format="1">
+  <advance width="575"/>
+  <outline>
+    <component base="miao_uang"/>
+    <contour>
+      <point x="0" y="219" type="move" name="_FL"/>
+    </contour>
+    <contour>
+      <point x="289" y="219" type="move" name="_FM"/>
+    </contour>
+    <contour>
+      <point x="575" y="219" type="move" name="_FR"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="move" name="_HL"/>
+    </contour>
+    <contour>
+      <point x="289" y="0" type="move" name="_HM"/>
+    </contour>
+    <contour>
+      <point x="575" y="0" type="move" name="_HR"/>
+    </contour>
+  </outline>
+</glyph>
