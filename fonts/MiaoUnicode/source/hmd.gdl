@@ -351,7 +351,7 @@ gZzsaChux, gZzsyaChux, gHhaChux
                     gSa, gZa, gZsa, gZza, gZzsa)
     { aboveNormS = point(bb.width/2, bb.top+90m) ;
       aboveTopS  = point(bb.width/2, bb.top+320m) ;
-      aboveDescS = point(bb.width/2, bb.top+340m) ;
+      aboveDescS = point(bb.right-80m, bb.top+240m) ;
       belowNormS = point(bb.width/2, bb.bottom-320m) ;
       belowTopS  = point(bb.width/2, bb.bottom-90m) ;
       belowDescS = point(bb.width/2, bb.bottom-70m) } ;
@@ -383,7 +383,7 @@ gZzsaChux, gZzsyaChux, gHhaChux
                     gDzha, gTshaYi, gDzhaYi)
     { aboveNormS = point(bb.width/2+100m, bb.top+90m) ;
       aboveTopS  = point(bb.width/2+100m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+100m, bb.top+340m) ;
+      aboveDescS = point(bb.right-80m, bb.top+240m) ;
       belowNormS = point(bb.width/2+100m, bb.bottom-320m) ;
       belowTopS  = point(bb.width/2+100m, bb.bottom-90m) ;
       belowDescS = point(bb.width/2+100m, bb.bottom-70m) } ;
@@ -402,7 +402,7 @@ gZzsaChux, gZzsyaChux, gHhaChux
                     gNya, gSha, gShaSalt, gZzsya)
     { aboveNormS = point(bb.width/2+50m, bb.top+90m) ;
       aboveTopS  = point(bb.width/2+50m, bb.top+320m) ;
-      aboveDescS = point(bb.width/2+50m, bb.top+340m) ;
+      aboveDescS = point(bb.right, bb.top+240m) ;
       belowNormS = point(bb.width/2+50m, bb.bottom-320m) ;
       belowTopS  = point(bb.width/2+50m, bb.bottom-90m) ;
       belowDescS = point(bb.width/2+50m, bb.bottom-70m) } ;
@@ -529,7 +529,7 @@ gZzsaChux, gZzsyaChux, gHhaChux
   gIYcmp = postscript("miao_i.ycmp");  // U+16F61 compressed·	𖽡
   gIaYcmp = postscript("miao_ia.ycmp");  // U+16F62 compressed·	𖽢
   gIanYcmp = postscript("miao_ian.ycmp");  // U+16F63 compressed·	𖽣
-  gIangYcmp = postscript("miao_iang.ycmp");  // U+16F64 compressed·	𖽤
+  gIangYcmp = postscript("miao_iang");  // U+16F64 compressed·	𖽤
   gIoYcmp = postscript("miao_io.ycmp");  // U+16F65 compressed·	𖽥
   gIeYcmp = postscript("miao_ie.ycmp");  // U+16F66 compressed·	𖽦
   gIiYcmp = postscript("miao_ii.ycmp");  // U+16F67 compressed·	𖽧
@@ -977,7 +977,7 @@ table(pos) { MUnits = 1000 }
     /  _ clsAsp? _ gAbove ;
   clsInit clsFinaYcmpTop {attach {to=@1; at=aboveTopS; with=TopM; level = 2}}
     /  _ clsAsp? _ gAbove ;
-  clsInit clsFinaYcmpDesc {attach {to=@1; at=aboveDescS; with=DescM; level = 2}}
+  clsInit clsFinaYcmpDesc {attach {to=@1; at=aboveDescS; with=DescR; level = 2}}
     /  _ clsAsp? _ gAbove ;
 
 /* place final below initial if it is alone */
@@ -1031,6 +1031,7 @@ table(pos) { MUnits = 1000 }
 /* shift the "a" final up an extra notch for right and topright */
   gA {shift.y = 219m+80m}  / _ OPT_FINA_SEQ gRight ;
   gA {shift.y = 438m+160m} / _ OPT_FINA_SEQ gTopRight ;
+  clsFinaYcmpDesc {shift.x = 320m} / clsAspHi _ gAbove;
  endpass; // pass3
 endtable; // positioning table
 
