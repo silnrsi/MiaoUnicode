@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>ascender</key>
-  <integer>750</integer>
+  <integer>984</integer>
   <key>capHeight</key>
   <integer>658</integer>
   <key>copyright</key>
@@ -11,25 +11,25 @@
 
 Copyright (c) 2013 Philip Reimer, with Reserved Font Name 'Miao Unicode'.</string>
   <key>descender</key>
-  <integer>-250</integer>
+  <integer>-273</integer>
   <key>familyName</key>
   <string>Miao Unicode</string>
-  <key>italicAngle</key>
-  <integer>0</integer>
-  <key>note</key>
-  <string/>
   <key>openTypeHeadCreated</key>
-  <string>2017/12/06 10:46:27</string>
+  <string>2017/12/08 14:54:34</string>
   <key>openTypeHheaAscender</key>
   <integer>984</integer>
   <key>openTypeHheaDescender</key>
   <integer>-273</integer>
   <key>openTypeHheaLineGap</key>
   <integer>0</integer>
+  <key>openTypeNameDescription</key>
+  <string>Copyright (c) 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+
+Copyright (c) 2013 Philip Reimer, with Reserved Font Name 'Miao Unicode'.</string>
   <key>openTypeNameDesigner</key>
   <string>Philip Reimer</string>
   <key>openTypeNameDesignerURL</key>
-  <string>unknown</string>
+  <string>http://phjamr.github.io/</string>
   <key>openTypeNameLicense</key>
   <string>Basic latin glyphs from Source Sans Pro (https://github.com/adobe-fonts/source-sans-pro) and copyright (c) 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
 
@@ -83,8 +83,14 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <string>Philip Reimer</string>
   <key>openTypeNameManufacturerURL</key>
   <string>http://phjamr.github.io/</string>
+  <key>openTypeNamePreferredFamilyName</key>
+  <string>Miao Unicode</string>
+  <key>openTypeNamePreferredSubfamilyName</key>
+  <string>Regular</string>
+  <key>openTypeNameUniqueID</key>
+  <string>Philip Reimer: Miao Unicode Regular: 2017</string>
   <key>openTypeNameVersion</key>
-  <string>0.6 (Beta)</string>
+  <string>v0.600 beta</string>
   <key>openTypeOS2CodePageRanges</key>
   <array>
     <integer>0</integer>
@@ -132,12 +138,10 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <integer>350</integer>
   <key>openTypeOS2SuperscriptYSize</key>
   <integer>600</integer>
-  <key>openTypeOS2Type</key>
-  <array/>
   <key>openTypeOS2TypoAscender</key>
-  <integer>750</integer>
+  <integer>984</integer>
   <key>openTypeOS2TypoDescender</key>
-  <integer>-250</integer>
+  <integer>-273</integer>
   <key>openTypeOS2TypoLineGap</key>
   <integer>0</integer>
   <key>openTypeOS2UnicodeRanges</key>
@@ -149,7 +153,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
     <integer>32</integer>
   </array>
   <key>openTypeOS2VendorID</key>
-  <string>ADBE</string>
+  <string>SIL </string>
   <key>openTypeOS2WeightClass</key>
   <integer>400</integer>
   <key>openTypeOS2WidthClass</key>
@@ -161,7 +165,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>postscriptFontName</key>
   <string>MiaoUnicode-Regular</string>
   <key>postscriptFullName</key>
-  <string>Miao Unicode</string>
+  <string>Miao Unicode Regular</string>
   <key>postscriptUnderlinePosition</key>
   <integer>-50</integer>
   <key>postscriptUnderlineThickness</key>
