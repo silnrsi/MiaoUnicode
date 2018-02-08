@@ -13,7 +13,8 @@ sourcedir='source/'
 
 langmap = {
    'hmd' : [['hmdUni'],['Shimenkan']],
-   'lpo' : [['lpoUni'],['Taogu']]
+   'lpo' : [['lpoUni'],['Taogu']],
+   'ywq' : [['ywqUni'],['Salaowu']]
 }
 
 for l in langmap.keys():
