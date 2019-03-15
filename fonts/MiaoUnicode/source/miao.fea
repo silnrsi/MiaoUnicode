@@ -203,7 +203,8 @@ lookup addRSB {
 	pos @clsInit' <0 0 450 0> @clsAspHi'<-450 0 0 0> @clsFina200_300'<-450 0 0 0> @clsPosRight;
 	pos @clsInit' <0 0 200 0> @clsAspHi @clsFinaYcmp miao_tone_above.blnk;
 
-	pos @clsInit' <0 0 650 0> @clsAspHi @clsFina200_300'<-650 0 0 0> @clsFina;
+	pos @clsInit' <0 0 650 0> @clsAspHi @clsFina200_300 @clsFina;
+	pos @clsInit @clsAspHi @clsFina200_300'<-650 0 0 0> @clsFina;
 
 	pos @clsInit' <0 0 650 0> @clsFina' <-650 0 0 0> @clsFina;
 
@@ -211,7 +212,8 @@ lookup addRSB {
 	pos @clsInit' <0 0 300 0> @clsFina300_400' <-300 0 0 0> @clsPosRight;
 	pos @clsInit' <0 0 200 0> @clsFina200_300' <-200 0 0 0> @clsPosRight;
 
-	pos @clsInit' <0 0 250 0> @clsAspHi @clsFina' <-250 0 0 0>;
+	pos @clsInit' <0 0 250 0> @clsAspHi @clsFina;
+	pos @clsInit @clsAspHi @clsFina' <-250 0 0 0>;
 
 	pos @clsInit' <0 0 300 0> @clsFina' <-300 0 0 0>;
 

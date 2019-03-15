@@ -26,7 +26,8 @@ for l in langmap.keys():
      target=process('fonts/' + fontname + '.ttf', *cmds),
 	source=sourcedir + APPNAME + '.sfd',
 #    graphite=gdl('fonts/' + l + '.gdl', master=sourcedir + l + '.gdl', params="-d -q -w3521", make_params="-r"),
-    opentype = fea("miao.fea", master="source/miao.fea", make_params="-z 8"),
+    opentype = fea("miao.fea", master="source/miao.fea", old_make_fea = True, make_params="-z 8"),
+
     script = 'plrd'
 )
 
